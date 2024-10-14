@@ -145,6 +145,63 @@ main
     font-size: 1.5em;
     margin-top: 10px;
 }
+/* Stili per il Main */
+main 
+{
+    display: flex;
+    flex-direction: column;
+    height: calc(100vh - 40px); /* L'altezza del main sarà il 100% della viewport meno l'header */
+}
+/* Stili per la sezione dei continenti */
+.continenti 
+{
+    display: flex;
+    flex-wrap: wrap; /* Permette ai contenuti di andare a capo se necessario */
+    justify-content: space-around; /* Spazio uniforme tra i continenti */
+    align-items: center;
+    flex: 1; /* Fa sì che la sezione occupi lo spazio rimanente del main */
+    padding: 20px;
+    background-color: #f8f8f8; /* Colore di sfondo chiaro */
+}
+.continente 
+{
+    flex-basis: calc(100% / 3 - 20px); /* Ogni sezione occupa un terzo della larghezza (con margine) */
+    margin: 10px;
+    text-align: center;
+    background-color: #fff; /* Sfondo bianco per ogni sezione */
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Leggera ombra */
+    overflow: hidden; /* Per far sì che l'immagine rimanga all'interno del box */
+    transition: transform 0.3s ease;
+}
+.continente:hover 
+{
+    transform: translateY(-5px); /* Leggero sollevamento al passaggio del mouse */
+}
+.continente img 
+{
+    width: 100%; /* L'immagine occupa tutta la larghezza del box */
+    height: 150px; /* Altezza fissa dell'immagine */
+    object-fit: cover; /* Adatta l'immagine al contenitore senza distorsioni */
+}
+.continente p 
+{
+    margin: 15px 0;
+    font-size: 1.2em;
+    color: #333;
+}
+.btn {
+    background-color: #007BFF;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    margin-top: 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+.btn:hover {
+    background-color: #0056b3;
+}
 .btn 
 {
     background-color: #007BFF;
