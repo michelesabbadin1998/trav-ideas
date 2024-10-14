@@ -22,17 +22,16 @@ footer
     width: 100%;
     margin: 0; /* Rimuove eventuali margini */
     font-size: 12px;
-    padding: 20px;
+    padding: 5px 20px;
 }
 footer ul 
-    {
-        list-style: none;
-        padding: 0;
-        display: flex;
-        justify-content: center;
-        margin: 10px 0;
-    }
-
+{
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    margin: 10px 0;
+}
 footer ul li 
 {
     margin: 0 15px; /* Spazio tra i link */
