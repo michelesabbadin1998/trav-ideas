@@ -61,7 +61,7 @@ main
 {
     list-style-type: none; /* Rimuovi i punti elenco */
     margin: 0; /* Rimuovi margini */
-    padding: 0; /* Rimuovi padding */
+    padding: 10; /* Rimuovi padding */
     display: flex; /* Utilizza flexbox per il menu */
     justify-content: flex-end; /* Allinea il menu a destra */
 }
@@ -75,7 +75,7 @@ main
     text-decoration: none; /* Rimuovi sottolineatura */
     font-size: 16px; /* Dimensione del testo */
     display: inline-block;
-    padding: 5px;
+    padding: 10px;
     margin: 0;
 }
 .menu a:hover 
