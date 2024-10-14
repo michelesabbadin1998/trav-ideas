@@ -8,28 +8,6 @@ body
     margin-left: 20px;
     margin-right: 20px;
 }
-html, body 
-{
-    height: 100%;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-}
-/* Aggiungi margini laterali specifici alle fasce (header e footer) */
-header, footer 
-{
-    padding-left: 20px;
-    padding-right: 20px;
-    height: 30px;
-}
-/* La sezione main si espande per riempire lo spazio disponibile */
-main 
-{
-    flex: 1;
-    margin-left: 20px;
-    margin-right: 20px;
-}
 /* Stile per il footer */
 footer 
 {
@@ -55,7 +33,6 @@ footer
     color: white; /* Testo bianco */
     padding: 10px; /* Spaziatura interna */
     text-align: left; /* Allinea il testo a sinistra */
-    margin: 0; /* Rimuove il margine */
     width: 100%; /* Estendi la fascia alla larghezza completa della pagina */
     position: fixed; /* Fissa la fascia in alto */
     top: 0; /* Posiziona la fascia in cima alla pagina */
@@ -92,7 +69,6 @@ footer
     position: absolute; /* Posiziona il menu a tendina in modo assoluto */
     background-color: #4CAF50; /* Colore verde */
     padding: 10px; /* Spaziatura interna */
-    margin-top: 10px; /* Margine superiore per separarlo dal link principale */
     border-radius: 5px; /* Angoli arrotondati */
     z-index: 1; /* Assicurati che il menu sia sopra altri contenuti */
 }
