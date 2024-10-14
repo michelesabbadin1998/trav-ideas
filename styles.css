@@ -6,6 +6,30 @@ body
     padding: 20px;
     margin-top: 60px; /* Aggiungi margine in alto per evitare che il contenuto venga nascosto dalla fascia */
 }
+html, body 
+{
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+}
+/* La sezione main si espande per riempire lo spazio disponibile */
+main 
+{
+    flex: 1;
+}
+/* Stile per il footer */
+footer 
+{
+    background-color: #4CAF50; /* Colore verde del footer */
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: relative; /* Non è fissato, si adatta alla fine del contenuto */
+    bottom: 0;
+    width: 100%;
+}
 .header-fascia h1 
 {
     text-align: left; /* Allinea il testo a sinistra */
