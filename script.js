@@ -20,3 +20,25 @@ document.getElementById('recensioneForm').addEventListener
     document.getElementById('recensioneForm').reset();
 }
 );
+document.getElementById('commentoForm').addEventListener
+  (
+    'submit', function(event) 
+   {
+    event.preventDefault();
+
+    // Ottieni i valori dal modulo
+    const nomeCommento = document.getElementById('nomeCommento').value;
+    const messaggioCommento = document.getElementById('messaggioCommento').value;
+
+    // Crea un elemento per il nuovo commento
+    const nuovoCommento = document.createElement('div');
+    nuovoCommento.classList.add('commento');
+    nuovoCommento.innerHTML = `<h3>${nomeCommento}</h3><p>${messaggioCommento}</p>`;
+
+    // Aggiungi il nuovo commento alla sezione delle discussioni
+    document.getElementById('commenti').appendChild(nuovoCommento);
+
+    // Resetta il modulo
+    document.getElementById('commentoForm').reset();
+  }
+);
