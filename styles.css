@@ -47,7 +47,7 @@ footer ul li a
 {
     color: white;
     text-decoration: none;
-    font-size: 16px; /* Puoi modificare la dimensione del testo dei social */
+    font-size: 12px; /* Puoi modificare la dimensione del testo dei social */
 }
 footer ul li a:hover 
 {
