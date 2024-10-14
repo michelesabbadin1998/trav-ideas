@@ -8,9 +8,22 @@ body
 .header-fascia h1 
 {
     text-align: left; /* Allinea il testo a sinistra */
-    font-size: 24px; /* Modifica la dimensione del carattere (puoi cambiarla a tuo piacimento) */
+    font-size: 18px; /* Modifica la dimensione del carattere (puoi cambiarla a tuo piacimento) */
     margin: 0; /* Rimuove il margine predefinito */
     padding: 10px 0; /* Aggiungi un po' di spaziatura verticale se necessario */
+}
+.header-fascia 
+{
+    background-color: #4CAF50; /* Colore verde */
+    color: white; /* Testo bianco */
+    padding: 10px; /* Spaziatura interna */
+    text-align: left; /* Allinea il testo a sinistra */
+    margin: 0; /* Rimuove il margine */
+    width: 100%; /* Estendi la fascia alla larghezza completa della pagina */
+    position: fixed; /* Fissa la fascia in alto */
+    top: 0; /* Posiziona la fascia in cima alla pagina */
+    left: 0; /* Posiziona a sinistra */
+    z-index: 1000; /* Assicura che sia sopra altri elementi */
 }
 h1 
 {
