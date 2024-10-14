@@ -51,7 +51,7 @@ main
 {
     flex: 1; /* Fa in modo che il main occupi tutto lo spazio disponibile */
     padding: 20px; /* Padding interno */
-    margin-top: 60px; /* Spazio sotto l'header */
+    margin-top: 40px; /* Spazio sotto l'header */
 }
 .menu 
 {
