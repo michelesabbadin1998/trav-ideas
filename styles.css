@@ -21,7 +21,6 @@ footer
     bottom: 0;
     width: 100%;
     margin: 0; /* Rimuove eventuali margini */
-    padding: 10px; /* Aggiunto padding */
     font-size: 12px;
 }
 /* Stile per l'header */
