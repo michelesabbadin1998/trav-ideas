@@ -50,6 +50,7 @@ footer
     z-index: 1000; /* Assicura che sia sopra altri elementi */
     height: 40px;
     display: flex; 
+    justify-content: space-between; /* Spazio tra il titolo e il menu */
 }
 main 
 {
