@@ -33,6 +33,7 @@ body
     margin: 0; /* Rimuovi margini */
     padding: 0; /* Rimuovi padding */
     display: flex; /* Utilizza flexbox per il menu */
+    align-items: right;
 }
 .menu li 
 {
