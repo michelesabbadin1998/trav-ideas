@@ -108,6 +108,19 @@ main
 .dropdown a:hover 
 {
     background-color: rgba(255, 255, 255, 0.3); /* Sfumatura al passaggio del mouse
+}
+/* Transizioni nel menu */
+.dropdown 
+{
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    opacity: 0;
+    visibility: hidden;
+}
+.menu li:hover .dropdown 
+{
+    opacity: 1;
+    visibility: visible;
+}
 h1 
 {
     color: #333;
