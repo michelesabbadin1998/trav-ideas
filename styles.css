@@ -82,6 +82,42 @@ main
 {
     text-decoration: underline; /* Sottolinea il link al passaggio del mouse */
 }
+.hero 
+{
+    background-image: url('tuo_sfondoviaggio.jpg'); /* Inserisci l'immagine di sfondo */
+    background-size: cover;
+    background-position: center;
+    height: 400px;
+    color: white;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.hero h2 
+{
+    font-size: 3em;
+    margin: 0;
+}
+.hero p 
+{
+    font-size: 1.5em;
+    margin-top: 10px;
+}
+.btn 
+{
+    background-color: #007BFF;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    margin-top: 20px;
+    border-radius: 5px;
+}
+.btn:hover 
+{
+    background-color: #0056b3;
+}
 .dropdown 
 {
     display: none; /* Nascondi il menu a tendina di default */
