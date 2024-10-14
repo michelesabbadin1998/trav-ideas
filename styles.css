@@ -19,6 +19,7 @@ footer
     bottom: 0;
     width: 100%;
     margin: 0;
+    height: 30px;
 }
 .header-fascia h1 
 {
@@ -39,6 +40,7 @@ footer
     top: 0; /* Posiziona la fascia in cima alla pagina */
     left: 0; /* Posiziona a sinistra */
     z-index: 1000; /* Assicura che sia sopra altri elementi */
+    height: 40px;
 }
 .menu 
 {
