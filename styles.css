@@ -198,3 +198,35 @@ h2
 {
     color: #007BFF; /* Blu */
 }
+/* Media query per schermi piccoli */
+@media screen and (max-width: 768px) 
+{
+    .header-fascia 
+    {
+        flex-direction: column;
+        height: auto;
+        padding: 10px;
+    }
+    .menu 
+    {
+        flex-direction: column;
+        align-items: center;
+    }
+    .menu li 
+    {
+        margin: 10px 0;
+    }
+    .menu li a 
+    {
+        font-size: 18px;
+    }
+    h1 
+    {
+        font-size: 24px;
+    }
+    footer
+    {
+        font-size: 10px;
+    }
+}
+
