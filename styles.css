@@ -6,6 +6,12 @@ html, body
     display: flex; /* Imposta il body come contenitore flessibile */
     flex-direction: column; /* Dispone i figli in colonna */
 }
+main 
+{
+    flex: 1; /* Fa in modo che il contenuto principale occupi lo spazio rimanente */
+    padding: 20px;
+    margin-top: 40px; /* Spazio sotto l'header */
+}
 body 
 {
     font-family: Arial, sans-serif;
