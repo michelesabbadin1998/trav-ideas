@@ -10,11 +10,6 @@ body
 {
     font-family: Arial, sans-serif;
     background-color: #f0f0f0;
-    margin: 0;
-    padding: 10;
-    margin-top: 50px; /* Aggiungi margine in alto per evitare che il contenuto venga nascosto dalla fascia */
-    margin-left: 20px;
-    margin-right: 20px;
 }
 /* Stile per il footer */
 footer 
@@ -25,42 +20,45 @@ footer
     position: relative; /* Non è fissato, si adatta alla fine del contenuto */
     bottom: 0;
     width: 100%;
-    margin: 0;
-    height: auto;
+    margin: 0; /* Rimuove eventuali margini */
+    padding: 10px; /* Aggiunto padding */
+}
+/* Stile per l'header */
+.header-fascia 
+{
+    background-color: #4CAF50; /* Colore verde */
+    color: white; /* Testo bianco */
+    padding: 10px; /* Spaziatura interna */
+    display: flex; 
+    justify-content: space-between; /* Spazio tra il titolo e il menu */
+    align-items: center; /* Allinea verticalmente il contenuto */
+    width: 100%; /* Estendi la fascia alla larghezza completa della pagina */
+    position: fixed; /* Fissa la fascia in alto */
+    top: 0; /* Posiziona la fascia in cima alla pagina */
+    left: 0; /* Posiziona a sinistra */
+    z-index: 1000; /* Assicura che sia sopra altri elementi */
+    height: 50px; /* Modificato per allineare correttamente */
 }
 .header-fascia h1 
 {
     text-align: left; /* Allinea il testo a sinistra */
     font-size: 22px; /* Modifica la dimensione del carattere (puoi cambiarla a tuo piacimento) */
     margin: 0; /* Rimuove il margine predefinito */
-    padding: 10px 0; /* Aggiungi un po' di spaziatura verticale se necessario */
     color: white;
-}
-.header-fascia 
-{
-    background-color: #4CAF50; /* Colore verde */
-    color: white; /* Testo bianco */
-    padding: 10px; /* Spaziatura interna */
-    text-align: left; /* Allinea il testo a sinistra */
-    width: 100%; /* Estendi la fascia alla larghezza completa della pagina */
-    position: fixed; /* Fissa la fascia in alto */
-    top: 0; /* Posiziona la fascia in cima alla pagina */
-    left: 0; /* Posiziona a sinistra */
-    z-index: 1000; /* Assicura che sia sopra altri elementi */
-    height: 30px;
-    display: flex; 
-    justify-content: space-between; /* Spazio tra il titolo e il menu */
 }
 main 
 {
     flex: 1; /* Fa in modo che il main occupi tutto lo spazio disponibile */
+    padding: 20px; /* Padding interno */
+    margin-top: 60px; /* Spazio sotto l'header */
 }
 .menu 
 {
     list-style-type: none; /* Rimuovi i punti elenco */
-    margin-right: 20px;
     display: flex; /* Utilizza flexbox per il menu */
     justify-content: flex-end; /* Allinea il menu a destra */
+    padding: 0; /* Rimuovi padding */
+    margin: 0; /* Rimuovi margini */
 }
 .menu li 
 {
@@ -73,8 +71,8 @@ main
     font-size: 16px; /* Dimensione del testo */
     display: inline-block;
     padding: 10px;
-    margin: 0;
 }
+/* Rimanente codice CSS rimane invariato... */
 .menu a:hover 
 {
     text-decoration: underline; /* Sottolinea il link al passaggio del mouse */
