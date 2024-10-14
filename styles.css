@@ -4,6 +4,7 @@ body
     background-color: #f0f0f0;
     margin: 0;
     padding: 20px;
+    margin-top: 60px; /* Aggiungi margine in alto per evitare che il contenuto venga nascosto dalla fascia */
 }
 .header-fascia h1 
 {
