@@ -47,7 +47,7 @@ footer
     top: 0; /* Posiziona la fascia in cima alla pagina */
     left: 0; /* Posiziona a sinistra */
     z-index: 1000; /* Assicura che sia sopra altri elementi */
-    height: 40px;
+    height: 30px;
     display: flex; 
     justify-content: space-between; /* Spazio tra il titolo e il menu */
 }
@@ -59,7 +59,6 @@ main
 {
     list-style-type: none; /* Rimuovi i punti elenco */
     margin-right: 20px;
-    padding: 10; 
     display: flex; /* Utilizza flexbox per il menu */
     justify-content: flex-end; /* Allinea il menu a destra */
 }
