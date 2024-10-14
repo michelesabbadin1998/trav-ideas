@@ -10,7 +10,6 @@ h1
 {
     color: #333;
 }
-
 #proposte 
 {
     margin-top: 20px;
@@ -18,7 +17,6 @@ h1
     background-color: #fff;
     border-radius: 8px;
 }
-
 .proposta 
 {
     margin-bottom: 15px;
@@ -26,7 +24,47 @@ h1
     border: 1px solid #ddd;
     border-radius: 5px;
 }
+#aggiungi-recensione 
+{
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #f8f9fa; /* Grigio molto chiaro */
+    border-radius: 8px;
+}
 
+form 
+{
+    display: flex;
+    flex-direction: column;
+}
+
+label 
+{
+    margin: 10px 0 5px;
+}
+
+input, textarea 
+{
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button 
+{
+    padding: 10px;
+    background-color: #007BFF; /* Blu */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover 
+{
+    background-color: #0056b3; /* Blu scuro */
+}
 h2 
 {
     color: #007BFF; /* Blu */
