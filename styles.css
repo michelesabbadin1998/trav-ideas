@@ -26,6 +26,27 @@ body
     left: 0; /* Posiziona a sinistra */
     z-index: 1000; /* Assicura che sia sopra altri elementi */
 }
+.menu 
+{
+    list-style-type: none; /* Rimuovi i punti elenco */
+    margin: 0; /* Rimuovi margini */
+    padding: 0; /* Rimuovi padding */
+    display: flex; /* Utilizza flexbox per il menu */
+}
+.menu li 
+{
+    margin-left: 20px; /* Spazio tra i link */
+}
+.menu a 
+{
+    color: white; /* Colore dei link */
+    text-decoration: none; /* Rimuovi sottolineatura */
+    font-size: 16px; /* Dimensione del testo */
+}
+.menu a:hover 
+{
+    text-decoration: underline; /* Sottolinea il link al passaggio del mouse */
+}
 h1 
 {
     color: #333;
