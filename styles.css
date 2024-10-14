@@ -21,7 +21,6 @@ footer
     background-color: #4CAF50; /* Colore verde del footer */
     color: white;
     text-align: center;
-    padding: 10px;
     position: relative; /* Non è fissato, si adatta alla fine del contenuto */
     bottom: 0;
     width: 100%;
