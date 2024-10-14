@@ -24,26 +24,39 @@ footer
     font-size: 12px;
     padding: 20px;
 }
-    footer ul 
+footer ul 
     {
         list-style: none;
         padding: 0;
         display: flex;
         justify-content: center;
+        margin: 10px 0;
     }
-    footer ul li 
-    {
-        margin: 0 10px;
-    }
-    footer ul li a 
-    {
-        color: white;
-        text-decoration: none;
-    }
-    footer ul li a:hover 
-    {
-        text-decoration: underline;
-    }
+
+footer ul li 
+{
+    margin: 0 15px; /* Spazio tra i link */
+}
+footer ul li a 
+{
+    color: white;
+    text-decoration: none;
+    font-size: 16px; /* Puoi modificare la dimensione del testo dei social */
+}
+footer ul li a:hover 
+{
+    text-decoration: underline;
+}
+/* Stile per i link come "Privacy Policy" nel footer */
+footer p a 
+{
+    color: white;
+    text-decoration: none;
+}
+footer p a:hover 
+{
+    text-decoration: underline;
+}
 /* Stile per l'header */
 .header-fascia 
 {
