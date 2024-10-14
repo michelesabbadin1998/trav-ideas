@@ -57,7 +57,7 @@ footer
     margin: 0; /* Rimuovi margini */
     padding: 0; /* Rimuovi padding */
     display: flex; /* Utilizza flexbox per il menu */
-    align-items: right;
+    justify-content: flex-end; /* Allinea il menu a destra */
 }
 .menu li 
 {
