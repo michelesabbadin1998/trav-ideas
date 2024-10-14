@@ -29,7 +29,7 @@ footer
 {
     background-color: #4CAF50; /* Colore verde */
     color: white; /* Testo bianco */
-    padding: 10px; /* Spaziatura interna */
+    padding: 5px; /* Spaziatura interna */
     display: flex; 
     justify-content: space-between; /* Spazio tra il titolo e il menu */
     align-items: center; /* Allinea verticalmente il contenuto */
@@ -38,13 +38,14 @@ footer
     top: 0; /* Posiziona la fascia in cima alla pagina */
     left: 0; /* Posiziona a sinistra */
     z-index: 1000; /* Assicura che sia sopra altri elementi */
-    height: 50px; /* Modificato per allineare correttamente */
+    height: 30px; /* Modificato per allineare correttamente */
 }
 .header-fascia h1 
 {
     text-align: left; /* Allinea il testo a sinistra */
     font-size: 22px; /* Modifica la dimensione del carattere (puoi cambiarla a tuo piacimento) */
     margin: 0; /* Rimuove il margine predefinito */
+    padding: 0;
     color: white;
 }
 main 
