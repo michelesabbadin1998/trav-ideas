@@ -22,7 +22,28 @@ footer
     width: 100%;
     margin: 0; /* Rimuove eventuali margini */
     font-size: 12px;
+    padding: 20px;
 }
+    footer ul 
+    {
+        list-style: none;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+    }
+    footer ul li 
+    {
+        margin: 0 10px;
+    }
+    footer ul li a 
+    {
+        color: white;
+        text-decoration: none;
+    }
+    footer ul li a:hover 
+    {
+        text-decoration: underline;
+    }
 /* Stile per l'header */
 .header-fascia 
 {
