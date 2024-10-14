@@ -33,7 +33,7 @@ footer
 .header-fascia h1 
 {
     text-align: left; /* Allinea il testo a sinistra */
-    font-size: 18px; /* Modifica la dimensione del carattere (puoi cambiarla a tuo piacimento) */
+    font-size: 22px; /* Modifica la dimensione del carattere (puoi cambiarla a tuo piacimento) */
     margin: 0; /* Rimuove il margine predefinito */
     padding: 10px 0; /* Aggiungi un po' di spaziatura verticale se necessario */
     color: white;
