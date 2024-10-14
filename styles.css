@@ -49,6 +49,7 @@ footer
     left: 0; /* Posiziona a sinistra */
     z-index: 1000; /* Assicura che sia sopra altri elementi */
     height: 40px;
+    display: flex; 
 }
 main 
 {
