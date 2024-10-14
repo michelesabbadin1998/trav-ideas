@@ -5,7 +5,13 @@ body
     margin: 0;
     padding: 20px;
 }
-
+.header-fascia h1 
+{
+    text-align: left; /* Allinea il testo a sinistra */
+    font-size: 24px; /* Modifica la dimensione del carattere (puoi cambiarla a tuo piacimento) */
+    margin: 0; /* Rimuove il margine predefinito */
+    padding: 10px 0; /* Aggiungi un po' di spaziatura verticale se necessario */
+}
 h1 
 {
     color: #333;
