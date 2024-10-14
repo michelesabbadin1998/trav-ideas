@@ -26,6 +26,8 @@ header, footer
 main 
 {
     flex: 1;
+    margin-left: 20px;
+    margin-right: 20px;
 }
 /* Stile per il footer */
 footer 
