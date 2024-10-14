@@ -44,11 +44,40 @@ body
     color: white; /* Colore dei link */
     text-decoration: none; /* Rimuovi sottolineatura */
     font-size: 16px; /* Dimensione del testo */
+    display: inline-block;
+    padding: 5px;
 }
 .menu a:hover 
 {
     text-decoration: underline; /* Sottolinea il link al passaggio del mouse */
 }
+.dropdown 
+{
+    display: none; /* Nascondi il menu a tendina di default */
+    position: absolute; /* Posiziona il menu a tendina in modo assoluto */
+    background-color: #4CAF50; /* Colore verde */
+    padding: 10px; /* Spaziatura interna */
+    margin-top: 10px; /* Margine superiore per separarlo dal link principale */
+    border-radius: 5px; /* Angoli arrotondati */
+    z-index: 1; /* Assicurati che il menu sia sopra altri contenuti */
+}
+.menu li:hover .dropdown 
+{
+    display: block; /* Mostra il menu a tendina al passaggio del mouse */
+}
+.dropdown li 
+{
+    margin: 0; /* Nessun margine per gli elementi del menu a tendina */
+}
+.dropdown a 
+{
+    display: block; /* Rende i link del menu a tendina a blocco, occupando l'intera larghezza */
+    padding: 5px; /* Padding per i link del menu a tendina */
+    color: white; /* Colore dei link del menu a tendina */
+}
+.dropdown a:hover 
+{
+    background-color: rgba(255, 255, 255, 0.3); /* Sfumatura al passaggio del mouse
 h1 
 {
     color: #333;
