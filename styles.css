@@ -1,3 +1,11 @@
+html, body 
+{
+    height: 100%; /* Imposta l'altezza al 100% della finestra */
+    margin: 0; /* Rimuove i margini di default */
+    padding: 0; /* Rimuove il padding di default */
+    display: flex; /* Imposta il body come contenitore flessibile */
+    flex-direction: column; /* Dispone i figli in colonna */
+}
 body 
 {
     font-family: Arial, sans-serif;
@@ -41,6 +49,12 @@ footer
     left: 0; /* Posiziona a sinistra */
     z-index: 1000; /* Assicura che sia sopra altri elementi */
     height: 40px;
+}
+main 
+{
+    flex: 1; /* Fa in modo che il main occupi tutto lo spazio disponibile */
+    padding: 20px; /* Padding interno */
+    margin-top: 60px; /* Aggiungi un margine in alto per evitare che il contenuto venga nascosto dalla fascia */
 }
 .menu 
 {
