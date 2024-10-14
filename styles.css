@@ -12,7 +12,7 @@ body
     background-color: #f0f0f0;
     margin: 0;
     padding: 20px;
-    margin-top: 60px; /* Aggiungi margine in alto per evitare che il contenuto venga nascosto dalla fascia */
+    margin-top: 40px; /* Aggiungi margine in alto per evitare che il contenuto venga nascosto dalla fascia */
     margin-left: 20px;
     margin-right: 20px;
 }
@@ -56,8 +56,7 @@ main
 {
     flex: 1; /* Fa in modo che il main occupi tutto lo spazio disponibile */
     padding: 20px; /* Padding interno */
-    margin-top: 60px; /* Aggiungi un margine in alto per evitare che il contenuto venga nascosto dalla fascia */
-}
+   }
 .menu 
 {
     list-style-type: none; /* Rimuovi i punti elenco */
