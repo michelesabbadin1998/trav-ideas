@@ -65,6 +65,10 @@ main
 {
     margin-left: 20px; /* Spazio tra i link */
 }
+.menu li:last-child 
+{
+    margin-right: 20px; /* Spazio a destra dell'elemento "Contattaci" */
+}
 .menu a 
 {
     color: white; /* Colore dei link */
