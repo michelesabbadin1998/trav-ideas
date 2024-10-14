@@ -17,12 +17,13 @@ footer
     background-color: #4CAF50; /* Colore verde del footer */
     color: white;
     text-align: center;
-    position: relative; /* Non è fissato, si adatta alla fine del contenuto */
+    position: fixed; /* Non è fissato, si adatta alla fine del contenuto */
     bottom: 0;
     width: 100%;
     margin: 0; /* Rimuove eventuali margini */
     font-size: 12px;
     padding: 5px 20px;
+    z-index: 1000;
 }
 footer ul 
 {
