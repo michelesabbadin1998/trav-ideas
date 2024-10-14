@@ -31,18 +31,15 @@ h1
     background-color: #f8f9fa; /* Grigio molto chiaro */
     border-radius: 8px;
 }
-
 form 
 {
     display: flex;
     flex-direction: column;
 }
-
 label 
 {
     margin: 10px 0 5px;
 }
-
 input, textarea 
 {
     padding: 10px;
@@ -50,7 +47,6 @@ input, textarea
     border: 1px solid #ccc;
     border-radius: 5px;
 }
-
 button 
 {
     padding: 10px;
@@ -60,7 +56,25 @@ button
     border-radius: 5px;
     cursor: pointer;
 }
-
+#discussioni 
+{
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #f1f1f1; /* Grigio chiaro */
+    border-radius: 8px;
+}
+#commenti 
+{
+    margin-bottom: 15px;
+}
+.commento 
+{
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff; /* Bianco */
+}
 button:hover 
 {
     background-color: #0056b3; /* Blu scuro */
