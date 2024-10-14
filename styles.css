@@ -53,13 +53,12 @@ footer
 main 
 {
     flex: 1; /* Fa in modo che il main occupi tutto lo spazio disponibile */
-    padding: 20px; /* Padding interno */
-   }
+}
 .menu 
 {
     list-style-type: none; /* Rimuovi i punti elenco */
-    margin: 0; /* Rimuovi margini */
-    padding: 10; /* Rimuovi padding */
+    margin-right: 20px;
+    padding: 10; 
     display: flex; /* Utilizza flexbox per il menu */
     justify-content: flex-end; /* Allinea il menu a destra */
 }
