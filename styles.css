@@ -208,7 +208,8 @@ main
     color: white;
     padding: 10px 20px;
     text-decoration: none;
-    margin-top: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
     border-radius: 5px;
 }
 .btn:hover 
