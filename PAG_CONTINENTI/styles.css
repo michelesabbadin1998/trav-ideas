@@ -155,8 +155,9 @@ main
     border: none; /* Rimuovi il bordo */
     cursor: pointer; /* Cambia il cursore al passaggio del mouse */
     font-size: 1em; /* Dimensione del testo */
-    margin-top: 15px; /* Margine superiore */
+    margin-top: 10px; /* Margine superiore */
     border-radius: 5px;
+    margin-bottom: 10px; /* Margine superiore */
 }
 .view-all-button:hover {
     background-color: #218838; /* Colore di sfondo verde scuro al passaggio del mouse */
