@@ -125,7 +125,7 @@ main
 {
     text-decoration: underline; /* Sottolinea il link al passaggio del mouse */
 }
-.hero.africa 
+.hero
 {
     background-image: url('../images-africa/africacover.jpg'); /* Inserisci l'immagine di sfondo */
     background-size: cover;
@@ -138,12 +138,12 @@ main
     justify-content: center;
     align-items: center;
 }
-.hero.africa h2 
+.hero h2 
 {
     font-size: 3em;
     margin: 0;
 }
-.hero.africa p 
+.hero p 
 {
     font-size: 1.5em;
     margin-top: 10px;
