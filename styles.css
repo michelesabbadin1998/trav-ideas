@@ -30,7 +30,6 @@ footer
     padding: 1px 20px;
     z-index: 1000;
     box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.2); /* Ombra sopra il footer */
-    position: relative; /* Permette di posizionare l'ombra senza fissare */
 }
 footer ul 
 {
