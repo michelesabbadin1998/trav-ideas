@@ -124,7 +124,7 @@ main
 }
 .hero 
 {
-    background-image: url('tuo_sfondoviaggio.jpg'); /* Inserisci l'immagine di sfondo */
+    background-image: url('images-index/scopri.jpg'); /* Inserisci l'immagine di sfondo */
     background-size: cover;
     background-position: center;
     height: 400px;
