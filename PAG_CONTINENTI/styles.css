@@ -148,6 +148,18 @@ main
     font-size: 1.5em;
     margin-top: 10px;
 }
+.view-all-button {
+    padding: 10px 20px; /* Spaziatura interna */
+    background-color: #28a745; /* Colore di sfondo verde */
+    color: white; /* Colore del testo bianco */
+    border: none; /* Rimuovi il bordo */
+    cursor: pointer; /* Cambia il cursore al passaggio del mouse */
+    font-size: 1em; /* Dimensione del testo */
+    margin-top: 15px; /* Margine superiore */
+}
+.view-all-button:hover {
+    background-color: #218838; /* Colore di sfondo verde scuro al passaggio del mouse */
+}
 /* Stili per il Main */
 main 
 {
