@@ -11,6 +11,7 @@ main
     flex: 1; /* Fa in modo che il contenuto principale occupi lo spazio rimanente */
     padding: 20px;
     margin-top: 40px; /* Spazio sotto l'header */
+    padding-bottom: 60px; /* Spazio extra per evitare che il footer si sovrapponga */
 }
 body 
 {
