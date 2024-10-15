@@ -23,13 +23,14 @@ footer
     background-color: #4CAF50; /* Colore verde del footer */
     color: white;
     text-align: center;
-    position: fixed; /* Non è fissato, si adatta alla fine del contenuto */
     bottom: 0;
     width: 100%;
     margin: 0; /* Rimuove eventuali margini */
     font-size: 12px;
     padding: 1px 20px;
     z-index: 1000;
+    box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.2); /* Ombra sopra il footer */
+    position: relative; /* Permette di posizionare l'ombra senza fissare */
 }
 footer ul 
 {
@@ -78,6 +79,8 @@ footer p a:hover
     left: 0; /* Posiziona a sinistra */
     z-index: 1000; /* Assicura che sia sopra altri elementi */
     height: 30px; /* Modificato per allineare correttamente */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Leggera ombra */
+    transition: background-color 0.3s; /* Transizione per l'effetto hover */
 }
 .header-fascia h1 
 {
