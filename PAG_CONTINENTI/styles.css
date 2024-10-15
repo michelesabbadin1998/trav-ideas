@@ -127,7 +127,7 @@ main
 }
 .hero.africa 
 {
-    background-image: url('images-index/scopri.jpg'); /* Inserisci l'immagine di sfondo */
+    background-image: url('../images-africa/africacover.jpg'); /* Inserisci l'immagine di sfondo */
     background-size: cover;
     background-position: center;
     height: 800px;
