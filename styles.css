@@ -28,7 +28,7 @@ footer
     width: 100%;
     margin: 0; /* Rimuove eventuali margini */
     font-size: 12px;
-    padding: 5px 20px;
+    padding: 1px 20px;
     z-index: 1000;
 }
 footer ul 
@@ -37,7 +37,7 @@ footer ul
     padding: 0;
     display: flex;
     justify-content: center;
-    margin: 5px 0;
+    margin: 1px 0;
 }
 footer ul li 
 {
