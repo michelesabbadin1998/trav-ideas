@@ -190,6 +190,26 @@ main
     font-size: 1.2em;
     color: #333;
 }
+/* Nuove regole per i link nella sezione continenti */
+.continente a 
+{
+    text-decoration: none; /* Rimuove la sottolineatura dai link */
+    color: #333; /* Colore del testo */
+    font-size: 1.2em; /* Dimensione del testo */
+    font-family: 'Arial', sans-serif; /* Font moderno, puoi cambiarlo se desideri */
+    transition: color 0.3s, transform 0.3s; /* Transizione per effetto hover */
+}
+.continente a:hover 
+{
+    color: #007BFF; /* Colore del testo al passaggio del mouse */
+    transform: scale(1.05); /* Effetto di ingrandimento al passaggio del mouse */
+}
+.continente p 
+{
+    margin: 15px 0;
+    font-size: 1.2em;
+    color: #333;
+}
 .btn {
     background-color: #007BFF;
     color: white;
