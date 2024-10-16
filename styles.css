@@ -25,11 +25,11 @@ footer
     color: white;
     text-align: center;
     width: 100%;
-    margin-top: auto; /* Questo spinge il footer in basso */
     font-size: 12px;
     padding: 10px 20px;
     z-index: 1000;
     box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.2); /* Ombra sopra il footer */
+    position: sticky;
 }
 footer ul 
 {
