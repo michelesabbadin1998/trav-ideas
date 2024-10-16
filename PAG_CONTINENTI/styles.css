@@ -24,16 +24,12 @@ footer
     background-color: #4CAF50; /* Colore verde del footer */
     color: white;
     text-align: center;
-    justify-content: center; /* Aggiunto per centrare orizzontalmente */
     width: 100%;
     font-size: 12px;
     margin: 0px;
     z-index: 1000;
     box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.2); /* Ombra sopra il footer */
     margin-top: 10px;
-    align-items: center; /* Centra verticalmente */
-    display: flex;
-    padding: 2px;
 }
 footer ul 
 {
@@ -41,7 +37,7 @@ footer ul
     padding: 0;
     display: flex;
     justify-content: center;
-    margin: 0;
+    margin: 1px 0;
 }
 footer ul li 
 {
@@ -62,7 +58,6 @@ footer p a
 {
     color: white;
     text-decoration: none;
-    justify-content: center;    
 }
 footer p a:hover 
 {
