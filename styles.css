@@ -8,7 +8,7 @@ html, body
 }
 main 
 {
-    flex-grow: 1; /* Fa in modo che il main cresca per occupare lo spazio rimanente */
+    flex: 1; /* Fa in modo che il main cresca per occupare lo spazio rimanente */
     padding: 20px;
     margin-top: 40px; /* Spazio sotto l'header */
     padding-bottom: 60px; /* Spazio extra per evitare che il footer si sovrapponga */
@@ -25,7 +25,7 @@ footer
     color: white;
     text-align: center;
     width: 100%;
-    margin: 0; /* Rimuove eventuali margini */
+    margin-top: auto; /* Questo spinge il footer in basso */
     font-size: 12px;
     padding: 10px 20px;
     z-index: 1000;
