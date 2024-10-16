@@ -6,6 +6,9 @@ html, body
     display: flex; /* Imposta il body come contenitore flessibile */
     flex-direction: column; /* Dispone i figli in colonna */
 }
+{
+    outline: 1px solid red; /* Per evidenziare i contorni di tutti gli elementi */
+}
 main 
 {
     flex: 1; /* Fa in modo che il main cresca per occupare lo spazio rimanente */
