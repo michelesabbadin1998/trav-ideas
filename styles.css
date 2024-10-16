@@ -98,34 +98,29 @@ main
     padding: 20px; /* Padding interno */
     margin-top: 40px; /* Spazio sotto l'header */
 }
-.menu 
-{
+.menu {
     list-style-type: none; /* Rimuovi i punti elenco */
     display: flex; /* Utilizza flexbox per il menu */
-    justify-content: flex-end; /* Allinea il menu a destra */
     padding: 0; /* Rimuovi padding */
     margin: 0; /* Rimuovi margini */
 }
-.menu li 
-{
-    margin-left: 20px; /* Spazio tra i link */
+.menu li {
+    margin-left: 5px; /* Riduci lo spazio tra i link */
 }
-.menu li:last-child 
-{
-    margin-right: 20px; /* Spazio a destra dell'elemento "Contattaci" */
+.menu li:last-child {
+    margin-right: 5px; /* Rimuovi spazio a destra dell'elemento "Contattaci" */
 }
-.menu a 
-{
+.menu a {
     color: white; /* Colore dei link */
     text-decoration: none; /* Rimuovi sottolineatura */
-    font-size: 16px; /* Dimensione del testo */
-    display: inline-block;
-    padding: 10px;
+    font-size: 14px; /* Dimensione del testo più piccola */
+    padding: 8px 12px; /* Riduci il padding per rendere il menu più compatto */
+    border-radius: 4px; /* Aggiungi angoli arrotondati per un aspetto più moderno */
+    transition: background-color 0.3s, color 0.3s; /* Aggiungi una transizione */
 }
-/* Rimanente codice CSS rimane invariato... */
-.menu a:hover 
-{
+.menu a:hover {
     text-decoration: underline; /* Sottolinea il link al passaggio del mouse */
+    background-color: rgba(255, 255, 255, 0.1); /* Aggiungi uno sfondo al passaggio del mouse */
 }
 .hero 
 {
