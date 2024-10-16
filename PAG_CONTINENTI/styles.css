@@ -106,7 +106,7 @@ main
     margin-left: 5px; /* Riduci lo spazio tra i link */
 }
 .menu li:last-child {
-    margin-right: 0; /* Rimuovi spazio a destra dell'elemento "Contattaci" */
+    margin-right: 5px; /* Rimuovi spazio a destra dell'elemento "Contattaci" */
 }
 .menu a {
     color: white; /* Colore dei link */
