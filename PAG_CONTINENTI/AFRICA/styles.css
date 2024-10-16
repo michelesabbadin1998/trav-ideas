@@ -1,1 +1,399 @@
-
+html, body 
+{
+    height: 100%; /* Imposta l'altezza al 100% della finestra */
+    margin: 0; /* Rimuove i margini di default */
+    padding: 0; /* Rimuove il padding di default */
+    display: flex; /* Imposta il body come contenitore flessibile */
+    flex-direction: column; /* Dispone i figli in colonna */
+}
+main 
+{
+    flex: 1; /* Fa in modo che il contenuto principale occupi lo spazio rimanente */
+    padding: 20px;
+    margin-top: 40px; /* Spazio sotto l'header */
+    margin-bottom: 60px; /* Spazio extra per evitare che il footer si sovrapponga */
+}
+body 
+{
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+}
+/* Stile per il footer */
+footer 
+{
+    background-color: #4CAF50; /* Colore verde del footer */
+    color: white;
+    text-align: center;
+    width: 100%;
+    font-size: 12px;
+    margin: 0px;
+    z-index: 1000;
+    box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.2); /* Ombra sopra il footer */
+    margin-top: 10px;
+}
+footer ul 
+{
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    margin: 1px 0;
+}
+footer ul li 
+{
+    margin: 0 15px; /* Spazio tra i link */
+}
+footer ul li a 
+{
+    color: white;
+    text-decoration: none;
+    font-size: 12px; /* Puoi modificare la dimensione del testo dei social */
+}
+footer ul li a:hover 
+{
+    text-decoration: underline;
+}
+/* Stile per i link come "Privacy Policy" nel footer */
+footer p a 
+{
+    color: white;
+    text-decoration: none;
+}
+footer p a:hover 
+{
+    text-decoration: underline;
+}
+/* Stile per l'header */
+.header-fascia 
+{
+    background-color: #4CAF50; /* Colore verde */
+    color: white; /* Testo bianco */
+    padding: 5px; /* Spaziatura interna */
+    display: flex; 
+    justify-content: space-between; /* Spazio tra il titolo e il menu */
+    align-items: center; /* Allinea verticalmente il contenuto */
+    width: 100%; /* Estendi la fascia alla larghezza completa della pagina */
+    position: fixed; /* Fissa la fascia in alto */
+    top: 0; /* Posiziona la fascia in cima alla pagina */
+    left: 0; /* Posiziona a sinistra */
+    z-index: 1000; /* Assicura che sia sopra altri elementi */
+    height: 30px; /* Modificato per allineare correttamente */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Leggera ombra */
+    transition: background-color 0.3s; /* Transizione per l'effetto hover */
+}
+.header-fascia h1 
+{
+    text-align: left; /* Allinea il testo a sinistra */
+    font-size: 22px; /* Modifica la dimensione del carattere (puoi cambiarla a tuo piacimento) */
+    margin: 0; /* Rimuove il margine predefinito */
+    padding: 0;
+    color: white;
+    text-decoration: none;
+}
+.header-fascia h1 a {
+    color: white; /* Colore bianco per il link */
+    text-decoration: none; /* Rimuove l'underlining */
+}
+main 
+{
+    flex: 1; /* Fa in modo che il main occupi tutto lo spazio disponibile */
+    padding: 20px; /* Padding interno */
+    margin-top: 40px; /* Spazio sotto l'header */
+}
+.menu {
+    list-style-type: none; /* Rimuovi i punti elenco */
+    display: flex; /* Utilizza flexbox per il menu */
+    padding: 0; /* Rimuovi padding */
+    margin: 0; /* Rimuovi margini */
+}
+.menu li {
+    margin-left: 5px; /* Riduci lo spazio tra i link */
+}
+.menu li:last-child {
+    margin-right: 5px; /* Rimuovi spazio a destra dell'elemento "Contattaci" */
+}
+.menu a {
+    color: white; /* Colore dei link */
+    text-decoration: none; /* Rimuovi sottolineatura */
+    font-size: 14px; /* Dimensione del testo più piccola */
+    padding: 8px 12px; /* Riduci il padding per rendere il menu più compatto */
+    border-radius: 4px; /* Aggiungi angoli arrotondati per un aspetto più moderno */
+    transition: background-color 0.3s, color 0.3s; /* Aggiungi una transizione */
+}
+.menu a:hover {
+    text-decoration: underline; /* Sottolinea il link al passaggio del mouse */
+    background-color: rgba(255, 255, 255, 0.1); /* Aggiungi uno sfondo al passaggio del mouse */
+}
+.hero
+{
+    background-image: url('../images-africa/africacover.jpg'); /* Inserisci l'immagine di sfondo */
+    background-size: cover;
+    background-position: center;
+    height: 800px;
+    color: white;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.hero h2 
+{
+    font-size: 3em;
+    margin: 0;
+}
+.hero p 
+{
+    font-size: 1.5em;
+    margin-top: 10px;
+}
+.view-all-button {
+    padding: 10px 20px; /* Spaziatura interna */
+    background-color: #28a745; /* Colore di sfondo verde */
+    color: white; /* Colore del testo bianco */
+    border: none; /* Rimuovi il bordo */
+    cursor: pointer; /* Cambia il cursore al passaggio del mouse */
+    font-size: 1em; /* Dimensione del testo */
+    margin-top: 10px; /* Margine superiore */
+    border-radius: 5px;
+    margin-bottom: 10px; /* Margine superiore */
+}
+.view-all-button:hover {
+    background-color: #218838; /* Colore di sfondo verde scuro al passaggio del mouse */
+}
+/* Stili per il Main */
+main 
+{
+    display: flex;
+    flex-direction: column;
+    height: calc(100vh - 40px); /* L'altezza del main sarà il 100% della viewport meno l'header */
+}
+/* Stili per la sezione dei continenti */
+.continenti 
+{
+    display: flex;
+    flex-wrap: wrap; /* Permette ai contenuti di andare a capo se necessario */
+    justify-content: space-around; /* Spazio uniforme tra i continenti */
+    align-items: center;
+    flex: 1; /* Fa sì che la sezione occupi lo spazio rimanente del main */
+    padding: 20px;
+    background-color: #f8f8f8; /* Colore di sfondo chiaro */
+}
+.continente {
+    flex-basis: calc(100% / 4 - 20px); /* Cambiato per mostrare 4 colonne invece di 3 */
+    margin: 5px; /* Ridotto margine per accorciare lo spazio */
+    text-align: center;
+    background-color: #fff; /* Sfondo bianco per ogni sezione */
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Leggera ombra */
+    overflow: hidden; /* Per far sì che l'immagine rimanga all'interno del box */
+    transition: transform 0.3s ease;
+    max-width: 250px; /* Imposta un massimo per evitare che diventino troppo piccole */
+}
+.continente:hover 
+{
+    transform: translateY(-5px); /* Leggero sollevamento al passaggio del mouse */
+}
+.continente img 
+{
+    width: 100%; /* L'immagine occupa tutta la larghezza del box */
+    height: 150px; /* Altezza fissa dell'immagine */
+    object-fit: cover; /* Adatta l'immagine al contenitore senza distorsioni */
+}
+.continente p 
+{
+    margin: 15px 0;
+    font-size: 0.8em;
+    color: #333;
+}
+/* Nuove regole per i link nella sezione continenti */
+.continente a {
+    text-decoration: none; /* Rimuove la sottolineatura dai link */
+    color: #333; /* Colore del testo */
+    font-size: 1em; /* Ridotto il testo per rendere il contenitore più compatto */
+    font-family: 'Arial', sans-serif; /* Font moderno, puoi cambiarlo se desideri */
+    transition: color 0.3s, transform 0.3s; /* Transizione per effetto hover */
+}
+.continente a:hover 
+{
+    color: #007BFF; /* Colore del testo al passaggio del mouse */
+    transform: scale(1.05); /* Effetto di ingrandimento al passaggio del mouse */
+}
+.continente p {
+    margin: 5px 0; /* Ridotto margine per un aspetto più compatto */
+    font-size: 1em; /* Ridotto il testo per un aspetto più compatto */
+    color: #333;
+}
+.btn {
+    background-color: #007BFF;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    margin-top: 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+.btn:hover {
+    background-color: #0056b3;
+}
+.btn 
+{
+    background-color: #007BFF;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+.btn:hover 
+{
+    background-color: #0056b3;
+}
+.dropdown 
+{
+    display: none; /* Nascondi il menu a tendina di default */
+    position: absolute; /* Posiziona il menu a tendina in modo assoluto */
+    background-color: #4CAF50; /* Colore verde */
+    padding: 10px; /* Spaziatura interna */
+    border-radius: 5px; /* Angoli arrotondati */
+    z-index: 1; /* Assicurati che il menu sia sopra altri contenuti */
+}
+.menu li:hover .dropdown 
+{
+    display: block; /* Mostra il menu a tendina al passaggio del mouse */
+}
+.dropdown li 
+{
+    margin: 0; /* Nessun margine per gli elementi del menu a tendina */
+}
+.dropdown a 
+{
+    display: block; /* Rende i link del menu a tendina a blocco, occupando l'intera larghezza */
+    padding: 5px; /* Padding per i link del menu a tendina */
+    color: white; /* Colore dei link del menu a tendina */
+}
+.dropdown a:hover 
+{
+    background-color: rgba(255, 255, 255, 0.3); /* Sfumatura al passaggio del mouse
+}
+/* Transizioni nel menu */
+.dropdown 
+{
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    opacity: 0;
+    visibility: hidden;
+}
+.menu li:hover .dropdown 
+{
+    opacity: 1;
+    visibility: visible;
+}
+h1 
+{
+    color: #333;
+}
+#proposte 
+{
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+}
+.proposta 
+{
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+#aggiungi-recensione 
+{
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #f8f9fa; /* Grigio molto chiaro */
+    border-radius: 8px;
+}
+form 
+{
+    display: flex;
+    flex-direction: column;
+}
+label 
+{
+    margin: 10px 0 5px;
+}
+input, textarea 
+{
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+button 
+{
+    padding: 10px;
+    background-color: #007BFF; /* Blu */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+#discussioni 
+{
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #f1f1f1; /* Grigio chiaro */
+    border-radius: 8px;
+}
+#commenti 
+{
+    margin-bottom: 15px;
+}
+.commento 
+{
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff; /* Bianco */
+}
+button:hover 
+{
+    background-color: #0056b3; /* Blu scuro */
+}
+h2 
+{
+    color: #007BFF; /* Blu */
+}
+/* Media query per schermi piccoli */
+@media screen and (max-width: 768px) 
+{
+    .header-fascia 
+    {
+        flex-direction: column;
+        height: auto;
+        padding: 10px;
+    }
+    .menu 
+    {
+        flex-direction: column;
+        align-items: center;
+    }
+    .menu li 
+    {
+        margin: 10px 0;
+    }
+    .menu li a 
+    {
+        font-size: 18px;
+    }
+    h1 
+    {
+        font-size: 24px;
+    }
+    footer
+    {
+        font-size: 10px;
+    }
+}
