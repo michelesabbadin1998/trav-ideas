@@ -175,16 +175,16 @@ main
     padding: 20px;
     background-color: #f8f8f8; /* Colore di sfondo chiaro */
 }
-.continente 
-{
-    flex-basis: calc(100% / 3 - 20px); /* Ogni sezione occupa un terzo della larghezza (con margine) */
-    margin: 10px;
+.continente {
+    flex-basis: calc(100% / 4 - 20px); /* Cambiato per mostrare 4 colonne invece di 3 */
+    margin: 5px; /* Ridotto margine per accorciare lo spazio */
     text-align: center;
     background-color: #fff; /* Sfondo bianco per ogni sezione */
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Leggera ombra */
     overflow: hidden; /* Per far sì che l'immagine rimanga all'interno del box */
     transition: transform 0.3s ease;
+    padding: 10px; /* Ridotto padding interno */
 }
 .continente:hover 
 {
@@ -203,11 +203,10 @@ main
     color: #333;
 }
 /* Nuove regole per i link nella sezione continenti */
-.continente a 
-{
+.continente a {
     text-decoration: none; /* Rimuove la sottolineatura dai link */
     color: #333; /* Colore del testo */
-    font-size: 1.2em; /* Dimensione del testo */
+    font-size: 1em; /* Ridotto il testo per rendere il contenitore più compatto */
     font-family: 'Arial', sans-serif; /* Font moderno, puoi cambiarlo se desideri */
     transition: color 0.3s, transform 0.3s; /* Transizione per effetto hover */
 }
@@ -216,10 +215,9 @@ main
     color: #007BFF; /* Colore del testo al passaggio del mouse */
     transform: scale(1.05); /* Effetto di ingrandimento al passaggio del mouse */
 }
-.continente p 
-{
-    margin: 15px 0;
-    font-size: 1.2em;
+.continente p {
+    margin: 5px 0; /* Ridotto margine per un aspetto più compatto */
+    font-size: 1em; /* Ridotto il testo per un aspetto più compatto */
     color: #333;
 }
 .btn {
