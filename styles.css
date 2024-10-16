@@ -178,7 +178,7 @@ main
 }
 .continente 
 {
-    flex-basis: calc(100% / 3 - 20px); /* Ogni sezione occupa un terzo della larghezza (con margine) */
+    flex-basis: calc(33% - 10px);
     margin: 10px;
     text-align: center;
     background-color: #fff; /* Sfondo bianco per ogni sezione */
@@ -186,7 +186,7 @@ main
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Leggera ombra */
     overflow: hidden; /* Per far sì che l'immagine rimanga all'interno del box */
     transition: transform 0.3s ease;
-    max-width: 250px; /* Imposta un massimo per evitare che diventino troppo piccole */
+    min-width: 250px; /* Imposta un massimo per evitare che diventino troppo piccole */
 }
 .continente:hover 
 {
