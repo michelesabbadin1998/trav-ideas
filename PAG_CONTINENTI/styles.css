@@ -37,7 +37,7 @@ footer ul
     padding: 0;
     display: flex;
     justify-content: center;
-    margin: 1px 0;
+    margin: 0;
 }
 footer ul li 
 {
@@ -58,6 +58,7 @@ footer p a
 {
     color: white;
     text-decoration: none;
+    margin-bottom: 2px;
 }
 footer p a:hover 
 {
