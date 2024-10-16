@@ -186,6 +186,7 @@ main
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Leggera ombra */
     overflow: hidden; /* Per far sì che l'immagine rimanga all'interno del box */
     transition: transform 0.3s ease;
+    max-width: 250px; /* Imposta un massimo per evitare che diventino troppo piccole */
 }
 .continente:hover 
 {
@@ -208,7 +209,7 @@ main
 {
     text-decoration: none; /* Rimuove la sottolineatura dai link */
     color: #333; /* Colore del testo */
-    font-size: 1.2em; /* Dimensione del testo */
+    font-size: 1em; /* Dimensione del testo */
     font-family: 'Arial', sans-serif; /* Font moderno, puoi cambiarlo se desideri */
     transition: color 0.3s, transform 0.3s; /* Transizione per effetto hover */
 }
@@ -220,7 +221,7 @@ main
 .continente p 
 {
     margin: 15px 0;
-    font-size: 1.2em;
+    font-size: 1em;
     color: #333;
 }
 .btn {
