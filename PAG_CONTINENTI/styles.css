@@ -90,6 +90,10 @@ footer p a:hover
     color: white;
     text-decoration: none;
 }
+.header-fascia h1 a {
+    color: white; /* Colore bianco per il link */
+    text-decoration: none; /* Rimuove l'underlining */
+}
 main 
 {
     flex: 1; /* Fa in modo che il main occupi tutto lo spazio disponibile */
