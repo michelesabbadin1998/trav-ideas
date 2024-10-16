@@ -102,7 +102,7 @@ main
     margin: 0; /* Rimuovi margini */
 }
 .menu li {
-    margin-left: 15px; /* Riduci lo spazio tra i link */
+    margin-left: 5px; /* Riduci lo spazio tra i link */
 }
 .menu li:last-child {
     margin-right: 0; /* Rimuovi spazio a destra dell'elemento "Contattaci" */
