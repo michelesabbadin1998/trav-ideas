@@ -88,7 +88,7 @@ header nav ul.menu li a:hover {
 }
 
 /* Hero section */
-.hero.tanzania {
+.hero-tanzania {
     background-image: url('../tanzania-image/tanzaniahero.jpg');
     background-size: cover;
     background-position: center;
@@ -101,12 +101,12 @@ header nav ul.menu li a:hover {
     align-items: center;
 }
 
-.hero.tanzania h2 {
+.hero-tanzania h2 {
     font-size: 3em;
     margin: 0;
 }
 
-.hero.tanzania p {
+.hero-tanzania p {
     font-size: 1.5em;
     margin-top: 10px;
 }
@@ -154,6 +154,29 @@ header nav ul.menu li a:hover {
     align-items: center;
 }
 
+/* Stile per i simboli delle icone */
+.proposta-icons img {
+    width: 24px; /* Imposta la dimensione delle icone */
+    height: 24px;
+    margin-left: 10px; /* Spaziatura tra le icone */
+}
+
+/* Contenitore per i simboli */
+.proposta-icons {
+    display: flex;
+    align-items: center;
+}
+
+/* Icona tipo viaggio */
+.trip-icon {
+    margin-right: 10px; /* Spaziatura a destra dell'icona tipo viaggio */
+}
+
+/* Icona costo */
+.price-icon {
+    margin-right: 10px; /* Spaziatura a destra dell'icona costo */
+}
+
 .proposta h3 {
     margin: 0;
 }
@@ -172,7 +195,19 @@ header nav ul.menu li a:hover {
     transform: rotate(180deg);
 }
 
-    
+/* Colore di sfondo per ogni proposta (puoi personalizzarlo) */
+.proposta-tanzania-coast {
+    background-color: #ffebcc; /* Colore di sfondo personalizzato */
+}
+
+.proposta-tanzania-mainland {
+    background-color: #e6ffe6; /* Colore di sfondo personalizzato */
+}
+
+.proposta-kilimanjaro {
+    background-color: #cce6ff; /* Colore di sfondo personalizzato */
+}
+
 /* Media query per schermi piccoli */
 @media screen and (max-width: 768px) 
 {
