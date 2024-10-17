@@ -316,11 +316,10 @@ h2
     transition: transform 0.3s ease;
 }
 .proposta-dettagli {
-    display: none;
-    margin-top: 10px;
+    display: none; /* Assicura che i dettagli siano nascosti inizialmente */
 }
 .proposta-dettagli.active {
-    display: block;
+    display: block; /* Mostra i dettagli solo quando viene aggiunta la classe "active" */
 }
 .toggle-details.rotated {
     transform: rotate(180deg); /* Ruota la freccia verso l'alto quando attiva */
