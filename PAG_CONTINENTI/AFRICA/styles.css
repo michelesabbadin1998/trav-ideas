@@ -52,6 +52,16 @@ header h1 {
     color: white;
 }
 
+header h1 a {
+    color: white; /* Colore bianco */
+    text-decoration: none; /* Rimuove la sottolineatura */
+}
+
+header h1 a:hover {
+    color: white; /* Colore bianco anche al passaggio del mouse */
+    text-decoration: none; /* Mantiene nessuna sottolineatura anche al passaggio del mouse */
+}
+
 header nav ul.menu {
     list-style-type: none;
     display: flex;
