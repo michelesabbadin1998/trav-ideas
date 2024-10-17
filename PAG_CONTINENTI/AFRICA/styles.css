@@ -339,25 +339,6 @@ button
     border-radius: 5px;
     cursor: pointer;
 }
-#discussioni 
-{
-    margin-top: 20px;
-    padding: 20px;
-    background-color: #f1f1f1; /* Grigio chiaro */
-    border-radius: 8px;
-}
-#commenti 
-{
-    margin-bottom: 15px;
-}
-.commento 
-{
-    margin-bottom: 10px;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    background-color: #fff; /* Bianco */
-}
 button:hover 
 {
     background-color: #0056b3; /* Blu scuro */
@@ -366,6 +347,50 @@ h2
 {
     color: #007BFF; /* Blu */
 }
+    
+/* Stile per la sezione delle proposte di viaggio */
+#proposte {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Ombra per un tocco moderno */
+}
+.proposta {
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    cursor: pointer; /* Cambia il cursore al passaggio del mouse */
+    transition: background-color 0.3s ease;
+}
+.proposta:hover {
+    background-color: #f1f1f1; /* Colore di sfondo leggermente diverso al passaggio del mouse */
+
+.proposta-header {
+    display: flex;
+    justify-content: space-between; /* Spazio tra il titolo e l'icona di espansione */
+    align-items: center;
+}
+.proposta h3 {
+    margin: 0;
+}
+.toggle-details {
+    font-size: 20px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+.proposta-dettagli {
+    display: none;
+    margin-top: 10px;
+}
+.proposta-dettagli.active {
+    display: block;
+}
+.toggle-details.rotated {
+    transform: rotate(180deg); /* Ruota la freccia verso l'alto quando attiva */
+}
+    
 /* Media query per schermi piccoli */
 @media screen and (max-width: 768px) 
 {
