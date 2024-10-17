@@ -89,7 +89,7 @@ header nav ul.menu li a:hover {
 
 /* Hero section */
 .hero-tanzania {
-    background-image: url('../tanzania-image/tanzaniahero.jpg');
+    background-image: url('TANZANIA/tanzania-image/tanzaniahero.jpg');
     background-size: cover;
     background-position: center;
     height: 30vh; /* L'hero occupa il 50% dell'altezza della finestra del browser */
