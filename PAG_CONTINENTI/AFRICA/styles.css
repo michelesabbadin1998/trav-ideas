@@ -324,6 +324,15 @@ h2
 .toggle-details.rotated {
     transform: rotate(180deg); /* Ruota la freccia verso l'alto quando attiva */
 }
+    .freccia {
+    cursor: pointer; /* Cambia il cursore per indicare che è cliccabile */
+    display: inline-block; /* Permette di ruotare la freccia */
+    transition: transform 0.3s; /* Transizione per la rotazione */
+}
+
+.freccia.rotated {
+    transform: rotate(180deg); /* Ruota di 180 gradi */
+}
     
 /* Media query per schermi piccoli */
 @media screen and (max-width: 768px) 
