@@ -156,8 +156,8 @@ header nav ul.menu li a:hover {
 
 /* Stile per i simboli delle icone */
 .proposta-icons img {
-    width: 24px; /* Imposta la dimensione delle icone */
-    height: 24px;
+    width: 60px; /* Imposta la dimensione delle icone */
+    height: 60px;
     margin-left: 10px; /* Spaziatura tra le icone */
 }
 
