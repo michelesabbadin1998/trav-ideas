@@ -250,40 +250,12 @@ main
 {
     background-color: #0056b3;
 }
-.dropdown 
-{
-    display: none; /* Nascondi il menu a tendina di default */
-    position: absolute; /* Posiziona il menu a tendina in modo assoluto */
-    background-color: #4CAF50; /* Colore verde */
-    padding: 10px; /* Spaziatura interna */
-    border-radius: 5px; /* Angoli arrotondati */
-    z-index: 1; /* Assicurati che il menu sia sopra altri contenuti */
-}
 .menu li:hover .dropdown 
 {
     display: block; /* Mostra il menu a tendina al passaggio del mouse */
 }
-.dropdown li 
-{
-    margin: 0; /* Nessun margine per gli elementi del menu a tendina */
-}
-.dropdown a 
-{
-    display: block; /* Rende i link del menu a tendina a blocco, occupando l'intera larghezza */
-    padding: 5px; /* Padding per i link del menu a tendina */
-    color: white; /* Colore dei link del menu a tendina */
-}
-.dropdown a:hover 
-{
-    background-color: rgba(255, 255, 255, 0.3); /* Sfumatura al passaggio del mouse
-}
+
 /* Transizioni nel menu */
-.dropdown 
-{
-    transition: opacity 0.3s ease, visibility 0.3s ease;
-    opacity: 0;
-    visibility: hidden;
-}
 .menu li:hover .dropdown 
 {
     opacity: 1;
@@ -292,43 +264,6 @@ main
 h1 
 {
     color: #333;
-}
-#proposte 
-{
-    margin-top: 20px;
-    padding: 20px;
-    background-color: #fff;
-    border-radius: 8px;
-}
-.proposta 
-{
-    margin-bottom: 15px;
-    padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-}
-#aggiungi-recensione 
-{
-    margin-top: 20px;
-    padding: 20px;
-    background-color: #f8f9fa; /* Grigio molto chiaro */
-    border-radius: 8px;
-}
-form 
-{
-    display: flex;
-    flex-direction: column;
-}
-label 
-{
-    margin: 10px 0 5px;
-}
-input, textarea 
-{
-    padding: 10px;
-    margin-bottom: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
 }
 button 
 {
