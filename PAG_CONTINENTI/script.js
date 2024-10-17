@@ -6,3 +6,12 @@ function toggleDetails(event) {
     // Ruota la freccia
     event.target.classList.toggle('rotated');
 }
+        const proposte = document.querySelectorAll('.proposta');
+        proposte.forEach(proposta => {
+            proposta.addEventListener('click', (event) => {
+                const dettagli = proposta.querySelector('.proposta-dettagli');
+                dettagli.classList.toggle('active');
+                const freccia = proposta.querySelector('.freccia');
+                freccia.classList.toggle('rotated');
+            });
+            });
