@@ -5,28 +5,36 @@ document.addEventListener('DOMContentLoaded', function () {
         const dettagli = proposta.querySelector('.proposta-dettagli');
         const freccia = proposta.querySelector('.freccia');
 
-        // Assicurati che i dettagli siano chiusi all'inizio
-        dettagli.classList.remove('active');
+        // Nascondi inizialmente i dettagli
+        dettagli.style.display = 'none';
 
-        // Aggiungi l'evento click alla freccia
+        // Aggiungi l'evento click alla freccia per gestire l'espansione
         freccia.addEventListener('click', (event) => {
             event.stopPropagation(); // Previene il reindirizzamento al clic
+            event.preventDefault();  // Previene comportamenti indesiderati sui link
 
-            // Chiudi tutti gli altri dettagli
+            // Chiudi tutte le altre proposte
             proposte.forEach(p => {
                 const otherDetails = p.querySelector('.proposta-dettagli');
                 const otherArrow = p.querySelector('.freccia');
                 if (otherDetails !== dettagli) {
-                    otherDetails.classList.remove('active');
-                    otherArrow.classList.remove('rotated');
+                    otherDetails.style.display = 'none';  // Nasconde i dettagli delle altre proposte
+                    otherArrow.classList.remove('rotated');  // Resetta la freccia
                 }
             });
 
-            // Alterna la visibilità dei dettagli e ruota la freccia
-            dettagli.classList.toggle('active');
+            // Alterna la visibilità dei dettagli della proposta corrente
+            if (dettagli.style.display === 'none') {
+                dettagli.style.display = 'block';
+            } else {
+                dettagli.style.display = 'none';
+            }
+
+            // Ruota la freccia
             freccia.classList.toggle('rotated');
         });
     });
 });
+
 
 
