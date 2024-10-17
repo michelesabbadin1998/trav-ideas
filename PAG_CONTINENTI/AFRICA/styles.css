@@ -1,132 +1,85 @@
-html, body 
-{
-    height: 100%; /* Imposta l'altezza al 100% della finestra */
-    margin: 0; /* Rimuove i margini di default */
-    padding: 0; /* Rimuove il padding di default */
-    display: flex; /* Imposta il body come contenitore flessibile */
-    flex-direction: column; /* Dispone i figli in colonna */
+html, body {
+    height: 100%; 
+    margin: 0; 
+    padding: 0; 
+    display: flex; 
+    flex-direction: column; 
 }
-main 
-{
-    flex: 1; /* Fa in modo che il contenuto principale occupi lo spazio rimanente */
-    padding: 20px;
-    margin-top: 40px; /* Spazio sotto l'header */
-    margin-bottom: 60px; /* Spazio extra per evitare che il footer si sovrapponga */
-}
-body 
-{
+
+body {
     font-family: Arial, sans-serif;
     background-color: #f0f0f0;
 }
-/* Stile per il footer */
-footer 
-{
-    background-color: #4CAF50; /* Colore verde del footer */
+
+main {
+    flex: 1; 
+    padding: 20px;
+    margin-top: 40px; 
+    margin-bottom: 60px;
+}
+
+footer {
+    background-color: #4CAF50; 
     color: white;
     text-align: center;
     width: 100%;
     font-size: 12px;
     margin: 0px;
     z-index: 1000;
-    box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.2); /* Ombra sopra il footer */
+    box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.2);
     margin-top: 10px;
 }
-footer ul 
-{
-    list-style: none;
-    padding: 0;
+
+header {
+    background-color: #4CAF50;
+    color: white;
     display: flex;
-    justify-content: center;
-    margin: 1px 0;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    padding: 5px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s;
 }
-footer ul li 
-{
-    margin: 0 15px; /* Spazio tra i link */
-}
-footer ul li a 
-{
+
+header h1 {
+    font-size: 22px;
+    margin: 0;
     color: white;
-    text-decoration: none;
-    font-size: 12px; /* Puoi modificare la dimensione del testo dei social */
 }
-footer ul li a:hover 
-{
-    text-decoration: underline;
-}
-/* Stile per i link come "Privacy Policy" nel footer */
-footer p a 
-{
-    color: white;
-    text-decoration: none;
-}
-footer p a:hover 
-{
-    text-decoration: underline;
-}
-/* Stile per l'header */
-.header-fascia 
-{
-    background-color: #4CAF50; /* Colore verde */
-    color: white; /* Testo bianco */
-    padding: 5px; /* Spaziatura interna */
-    display: flex; 
-    justify-content: space-between; /* Spazio tra il titolo e il menu */
-    align-items: center; /* Allinea verticalmente il contenuto */
-    width: 100%; /* Estendi la fascia alla larghezza completa della pagina */
-    position: fixed; /* Fissa la fascia in alto */
-    top: 0; /* Posiziona la fascia in cima alla pagina */
-    left: 0; /* Posiziona a sinistra */
-    z-index: 1000; /* Assicura che sia sopra altri elementi */
-    height: 30px; /* Modificato per allineare correttamente */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Leggera ombra */
-    transition: background-color 0.3s; /* Transizione per l'effetto hover */
-}
-.header-fascia h1 
-{
-    text-align: left; /* Allinea il testo a sinistra */
-    font-size: 22px; /* Modifica la dimensione del carattere (puoi cambiarla a tuo piacimento) */
-    margin: 0; /* Rimuove il margine predefinito */
+
+header nav ul.menu {
+    list-style-type: none;
+    display: flex;
+    margin: 0;
     padding: 0;
+}
+
+header nav ul.menu li {
+    margin-left: 5px;
+}
+
+header nav ul.menu li a {
     color: white;
     text-decoration: none;
+    font-size: 14px;
+    padding: 8px 12px;
+    border-radius: 4px;
+    transition: background-color 0.3s, color 0.3s;
 }
-.header-fascia h1 a {
-    color: white; /* Colore bianco per il link */
-    text-decoration: none; /* Rimuove l'underlining */
+
+header nav ul.menu li a:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    text-decoration: underline;
 }
-main 
-{
-    flex: 1; /* Fa in modo che il main occupi tutto lo spazio disponibile */
-    padding: 20px; /* Padding interno */
-    margin-top: 40px; /* Spazio sotto l'header */
-}
-.menu {
-    list-style-type: none; /* Rimuovi i punti elenco */
-    display: flex; /* Utilizza flexbox per il menu */
-    padding: 0; /* Rimuovi padding */
-    margin: 0; /* Rimuovi margini */
-}
-.menu li {
-    margin-left: 5px; /* Riduci lo spazio tra i link */
-}
-.menu li:last-child {
-    margin-right: 5px; /* Rimuovi spazio a destra dell'elemento "Contattaci" */
-}
-.menu a {
-    color: white; /* Colore dei link */
-    text-decoration: none; /* Rimuovi sottolineatura */
-    font-size: 14px; /* Dimensione del testo più piccola */
-    padding: 8px 12px; /* Riduci il padding per rendere il menu più compatto */
-    border-radius: 4px; /* Aggiungi angoli arrotondati per un aspetto più moderno */
-    transition: background-color 0.3s, color 0.3s; /* Aggiungi una transizione */
-}
-.menu a:hover {
-    text-decoration: underline; /* Sottolinea il link al passaggio del mouse */
-    background-color: rgba(255, 255, 255, 0.1); /* Aggiungi uno sfondo al passaggio del mouse */
-}
-.hero
-{
-    background-image: url('../images-africa/africacover.jpg'); /* Inserisci l'immagine di sfondo */
+
+/* Hero section */
+.hero {
+    background-image: url('../images-africa/africacover.jpg');
     background-size: cover;
     background-position: center;
     height: 800px;
@@ -137,202 +90,78 @@ main
     justify-content: center;
     align-items: center;
 }
-.hero h2 
-{
+
+.hero h2 {
     font-size: 3em;
     margin: 0;
 }
-.hero p 
-{
+
+.hero p {
     font-size: 1.5em;
     margin-top: 10px;
 }
-.view-all-button {
-    padding: 10px 20px; /* Spaziatura interna */
-    background-color: #28a745; /* Colore di sfondo verde */
-    color: white; /* Colore del testo bianco */
-    border: none; /* Rimuovi il bordo */
-    cursor: pointer; /* Cambia il cursore al passaggio del mouse */
-    font-size: 1em; /* Dimensione del testo */
-    margin-top: 10px; /* Margine superiore */
-    border-radius: 5px;
-    margin-bottom: 10px; /* Margine superiore */
-}
-.view-all-button:hover {
-    background-color: #218838; /* Colore di sfondo verde scuro al passaggio del mouse */
-}
-/* Stili per il Main */
-main 
-{
-    display: flex;
-    flex-direction: column;
-    height: calc(100vh - 40px); /* L'altezza del main sarà il 100% della viewport meno l'header */
-}
-/* Stili per la sezione dei continenti */
-.continenti 
-{
-    display: flex;
-    flex-wrap: wrap; /* Permette ai contenuti di andare a capo se necessario */
-    justify-content: space-around; /* Spazio uniforme tra i continenti */
-    align-items: center;
-    flex: 1; /* Fa sì che la sezione occupi lo spazio rimanente del main */
-    padding: 20px;
-    background-color: #f8f8f8; /* Colore di sfondo chiaro */
-}
-.continente {
-    flex-basis: calc(100% / 4 - 20px); /* Cambiato per mostrare 4 colonne invece di 3 */
-    margin: 5px; /* Ridotto margine per accorciare lo spazio */
-    text-align: center;
-    background-color: #fff; /* Sfondo bianco per ogni sezione */
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Leggera ombra */
-    overflow: hidden; /* Per far sì che l'immagine rimanga all'interno del box */
-    transition: transform 0.3s ease;
-    max-width: 250px; /* Imposta un massimo per evitare che diventino troppo piccole */
-}
-.continente:hover 
-{
-    transform: translateY(-5px); /* Leggero sollevamento al passaggio del mouse */
-}
-.continente img 
-{
-    width: 100%; /* L'immagine occupa tutta la larghezza del box */
-    height: 150px; /* Altezza fissa dell'immagine */
-    object-fit: cover; /* Adatta l'immagine al contenitore senza distorsioni */
-}
-.continente p 
-{
-    margin: 15px 0;
-    font-size: 0.8em;
-    color: #333;
-}
-/* Nuove regole per i link nella sezione continenti */
-.continente a {
-    text-decoration: none; /* Rimuove la sottolineatura dai link */
-    color: #333; /* Colore del testo */
-    font-size: 1em; /* Ridotto il testo per rendere il contenitore più compatto */
-    font-family: 'Arial', sans-serif; /* Font moderno, puoi cambiarlo se desideri */
-    transition: color 0.3s, transform 0.3s; /* Transizione per effetto hover */
-}
-.continente a:hover 
-{
-    color: #007BFF; /* Colore del testo al passaggio del mouse */
-    transform: scale(1.05); /* Effetto di ingrandimento al passaggio del mouse */
-}
-.continente p {
-    margin: 5px 0; /* Ridotto margine per un aspetto più compatto */
-    font-size: 1em; /* Ridotto il testo per un aspetto più compatto */
-    color: #333;
-}
-.btn {
-    background-color: #007BFF;
-    color: white;
-    padding: 10px 20px;
-    text-decoration: none;
-    margin-top: 20px;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
-}
-.btn:hover {
-    background-color: #0056b3;
-}
-.btn 
-{
-    background-color: #007BFF;
-    color: white;
-    padding: 10px 20px;
-    text-decoration: none;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    border-radius: 5px;
-}
-.btn:hover 
-{
-    background-color: #0056b3;
-}
-.menu li:hover .dropdown 
-{
-    display: block; /* Mostra il menu a tendina al passaggio del mouse */
-}
 
-/* Transizioni nel menu */
-.menu li:hover .dropdown 
-{
-    opacity: 1;
-    visibility: visible;
-}
-h1 
-{
-    color: #333;
-}
-button 
-{
-    padding: 10px;
-    background-color: #007BFF; /* Blu */
+.view-all-button {
+    padding: 10px 20px;
+    background-color: #28a745;
     color: white;
     border: none;
-    border-radius: 5px;
     cursor: pointer;
+    font-size: 1em;
+    border-radius: 5px;
+    margin-bottom: 10px;
 }
-button:hover 
-{
-    background-color: #0056b3; /* Blu scuro */
+
+.view-all-button:hover {
+    background-color: #218838;
 }
-h2 
-{
-    color: #007BFF; /* Blu */
-}
-    
-/* Stile per la sezione delle proposte di viaggio */
+
+/* Sezione delle proposte di viaggio */
 #proposte {
     margin-top: 20px;
     padding: 20px;
     background-color: #fff;
     border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Ombra per un tocco moderno */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
+
 .proposta {
     padding: 15px;
     border: 1px solid #ddd;
     border-radius: 5px;
     margin-bottom: 10px;
-    cursor: pointer; /* Cambia il cursore al passaggio del mouse */
+    cursor: pointer;
     transition: background-color 0.3s ease;
 }
+
 .proposta:hover {
-    background-color: #f1f1f1; /* Colore di sfondo leggermente diverso al passaggio del mouse */
+    background-color: #f1f1f1;
+}
 
 .proposta-header {
     display: flex;
-    justify-content: space-between; /* Spazio tra il titolo e l'icona di espansione */
+    justify-content: space-between;
     align-items: center;
 }
+
 .proposta h3 {
     margin: 0;
 }
+
 .toggle-details {
     font-size: 20px;
     cursor: pointer;
     transition: transform 0.3s ease;
 }
+
 .proposta-dettagli {
-    display: none; /* Assicura che i dettagli siano nascosti inizialmente */
-}
-.proposta-dettagli.active {
-    display: block; /* Mostra i dettagli solo quando viene aggiunta la classe "active" */
-}
-.toggle-details.rotated {
-    transform: rotate(180deg); /* Ruota la freccia verso l'alto quando attiva */
-}
-    .freccia {
-    cursor: pointer; /* Cambia il cursore per indicare che è cliccabile */
-    display: inline-block; /* Permette di ruotare la freccia */
-    transition: transform 0.3s; /* Transizione per la rotazione */
+    display: none; /* Dettagli nascosti di default */
 }
 
-.freccia.rotated {
-    transform: rotate(180deg); /* Ruota di 180 gradi */
+.toggle-details.rotated {
+    transform: rotate(180deg);
 }
+
     
 /* Media query per schermi piccoli */
 @media screen and (max-width: 768px) 
