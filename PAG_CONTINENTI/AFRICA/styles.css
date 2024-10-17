@@ -195,19 +195,6 @@ header nav ul.menu li a:hover {
     transform: rotate(180deg);
 }
 
-/* Colore di sfondo per ogni proposta (puoi personalizzarlo) */
-.proposta-tanzania-coast {
-    background-color: #ffebcc; /* Colore di sfondo personalizzato */
-}
-
-.proposta-tanzania-mainland {
-    background-color: #e6ffe6; /* Colore di sfondo personalizzato */
-}
-
-.proposta-kilimanjaro {
-    background-color: #cce6ff; /* Colore di sfondo personalizzato */
-}
-
 /* Media query per schermi piccoli */
 @media screen and (max-width: 768px) 
 {
