@@ -1,17 +1,26 @@
-function toggleDetails(event) {
-    event.stopPropagation(); // Previene il reindirizzamento quando si clicca sulla freccia
-    const dettagli = event.target.closest('.proposta').querySelector('.proposta-dettagli');
-    dettagli.classList.toggle('active'); // Alterna la visibilità dei dettagli
-    
-    // Ruota la freccia
-    event.target.classList.toggle('rotated');
-}
-        const proposte = document.querySelectorAll('.proposta');
-        proposte.forEach(proposta => {
-            proposta.addEventListener('click', (event) => {
-                const dettagli = proposta.querySelector('.proposta-dettagli');
-                dettagli.classList.toggle('active');
-                const freccia = proposta.querySelector('.freccia');
-                freccia.classList.toggle('rotated');
+document.addEventListener('DOMContentLoaded', function () {
+    const proposte = document.querySelectorAll('.proposta');
+
+    proposte.forEach(proposta => {
+        const dettagli = proposta.querySelector('.proposta-dettagli');
+
+        // Assicurati che i dettagli siano chiusi all'inizio
+        dettagli.classList.remove('active');
+
+        proposta.addEventListener('click', (event) => {
+            // Chiudi tutti gli altri dettagli
+            proposte.forEach(p => {
+                const otherDetails = p.querySelector('.proposta-dettagli');
+                if (otherDetails !== dettagli) {
+                    otherDetails.classList.remove('active');
+                    p.querySelector('.freccia').classList.remove('rotated');
+                }
             });
-            });
+
+            // Alterna la visibilità dei dettagli e ruota la freccia
+            dettagli.classList.toggle('active');
+            proposta.querySelector('.freccia').classList.toggle('rotated');
+        });
+    });
+});
+
