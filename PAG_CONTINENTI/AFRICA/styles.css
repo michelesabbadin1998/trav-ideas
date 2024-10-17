@@ -92,7 +92,7 @@ header nav ul.menu li a:hover {
     background-image: url('../images-africa/africacover.jpg');
     background-size: cover;
     background-position: center;
-    height: 50vh; /* L'hero occupa il 50% dell'altezza della finestra del browser */
+    height: 30vh; /* L'hero occupa il 50% dell'altezza della finestra del browser */
     color: white;
     text-align: center;
     display: flex;
