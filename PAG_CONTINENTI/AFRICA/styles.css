@@ -272,62 +272,83 @@ canvas {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-/* Imposta larghezza dei contenitori foto e alloggi */
+/* Stile per l'intero contenitore */
 #accommodation-and-photos {
-    width: 100%; /* Larghezza massima del contenitore */
     display: flex;
     justify-content: space-between;
-    gap: 10px;
-}
-
-#accommodation-container, #photos-container {
-    width: 49%; /* Ciascun contenitore occupa metà */
-    box-sizing: border-box;
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    gap: 20px;
+    padding: 20px;
+    width: 100%;
 }
 
 /* Slider */
 .slider {
-    display: flex;
+    position: relative;
+    width: 100%;
     overflow: hidden;
 }
 
 .slide {
-    min-width: 100%; /* Ogni slide occupa il 100% dello spazio disponibile */
-    padding: 10px;
-    box-sizing: border-box;
-    transition: transform 0.5s ease-in-out;
-}
-
-.photo-slide {
+    display: inline-block;
     width: 100%;
-    height: auto;
-    border-radius: 8px;
+    transition: transform 0.5s ease-in-out;
+    white-space: nowrap;
 }
 
-/* Frecce dello slider */
-.prev,
-.next {
+#accommodation-container, #photos-container {
+    width: 48%; /* Ogni slider occupa il 48% della larghezza */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+}
+
+h2 {
+    font-family: 'Inter', sans-serif;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+p {
+    font-family: 'Inter', sans-serif;
+    text-align: center;
+}
+
+/* Pulsanti per scorrere le slide */
+button.prev, button.next {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: #333;
     color: white;
     border: none;
     padding: 10px;
     cursor: pointer;
+    font-size: 1.2rem;
+    z-index: 1;
     border-radius: 50%;
 }
 
-.prev {
+button.prev {
     left: 10px;
 }
 
-.next {
+button.next {
     right: 10px;
 }
+
+button:hover {
+    background-color: #555;
+}
+
+/* Stile per le immagini nello slider delle foto */
+.photo-slide {
+    width: 100%;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
 
 /* Media query per schermi piccoli */
 @media screen and (max-width: 768px) 
