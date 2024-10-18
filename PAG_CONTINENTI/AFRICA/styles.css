@@ -173,7 +173,7 @@ header nav ul.menu li a:hover {
 /* Contenitore per i simboli */
 .proposta-icons {
     display: flex;
-    align-items: center;
+    align-items: right;
 }
 
 /* Icona tipo viaggio */
