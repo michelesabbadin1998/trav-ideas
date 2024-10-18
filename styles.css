@@ -127,7 +127,7 @@ main
     background-image: url('images-index/scopri.jpg'); /* Inserisci l'immagine di sfondo */
     background-size: cover;
     background-position: center;
-    height: 800px;
+    height: 30vh;
     color: white;
     text-align: center;
     display: flex;
