@@ -153,6 +153,15 @@ header nav ul.menu li a:hover {
     justify-content: space-between;
     align-items: center;
 }
+.proposta-link {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    text-decoration: none;
+    color: inherit; /* Mantiene il colore del testo */
+    padding: 10px; /* Padding per gestire lo spazio intorno agli elementi */
+}
 
 /* Stile per i simboli delle icone */
 .proposta-icons img {
@@ -185,6 +194,7 @@ header nav ul.menu li a:hover {
     font-size: 20px;
     cursor: pointer;
     transition: transform 0.3s ease;
+    z-index: 2; /* La freccia rimane sopra il link */
 }
 
 .proposta-dettagli {
