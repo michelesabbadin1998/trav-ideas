@@ -230,6 +230,7 @@ header nav ul.menu li a:hover {
     flex-direction: column;
     height: auto;
     margin-left: 10px; /* Margine per separare i due contenitori */
+    padding: 10px;
 }
 /* Allineamento del titolo h2 al centro */
 #tourist-container h2 {
