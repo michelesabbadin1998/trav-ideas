@@ -36,6 +36,7 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 });
 
+// Indici separati per i due slider
 let currentIndexAccommodation = 0;
 let currentIndexPhotos = 0;
 
@@ -45,20 +46,25 @@ function showSlide(containerId, index) {
     const totalSlides = slides.length;
 
     let currentIndex;
+
+    // Gestisce l'indice corretto in base al container
     if (containerId === 'accommodation-container') {
         currentIndex = currentIndexAccommodation;
     } else if (containerId === 'photos-container') {
         currentIndex = currentIndexPhotos;
     }
 
+    // Gestisce la logica di rotazione
     if (index >= totalSlides) currentIndex = 0;
     else if (index < 0) currentIndex = totalSlides - 1;
     else currentIndex = index;
 
+    // Applica la traduzione per mostrare la slide corretta
     slides.forEach((slide, i) => {
         slide.style.transform = `translateX(${(i - currentIndex) * 100}%)`;
     });
 
+    // Aggiorna l'indice corretto in base al container
     if (containerId === 'accommodation-container') {
         currentIndexAccommodation = currentIndex;
     } else if (containerId === 'photos-container') {
@@ -87,6 +93,5 @@ document.addEventListener('DOMContentLoaded', () => {
     showSlide('accommodation-container', 0);
     showSlide('photos-container', 0);
 });
-
 
 
