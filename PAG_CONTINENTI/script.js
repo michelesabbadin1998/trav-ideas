@@ -48,6 +48,7 @@ document.addEventListener('DOMContentLoaded', function () {
         const container = document.getElementById(containerId);
         const slides = container.querySelectorAll('.slide');
         const totalSlides = slides.length;
+        console.log(currentIndex);
 
         // Aggiorna l'indice corrente
         if (index >= totalSlides) currentIndex[containerId] = 0;
