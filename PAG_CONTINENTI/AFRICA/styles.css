@@ -205,7 +205,7 @@ header nav ul.menu li a:hover {
     }
 
     canvas {
-        width: 100%; /* Limita la larghezza massima del canvas */
+        width: 93%; /* Limita la larghezza massima del canvas */
         height: auto; /* Imposta l'altezza automaticamente */
         margin: 10px 0; /* Spaziatura tra i grafici */
     }
