@@ -203,6 +203,7 @@ header nav ul.menu li a:hover {
     border-radius: 8px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     margin-bottom: 10px;
+    padding: 5px;
 }
     
  #weather-section {
@@ -236,6 +237,7 @@ canvas {
     width: 93%; /* Mantiene la larghezza massima */
     height: auto; /* Imposta l'altezza automaticamente */
     margin: 10px 0; /* Spaziatura tra i grafici */
+    padding: 5px;
 }
 /* Media query per schermi piccoli */
 @media screen and (max-width: 768px) 
