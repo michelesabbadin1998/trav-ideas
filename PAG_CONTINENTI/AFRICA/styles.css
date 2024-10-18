@@ -194,21 +194,37 @@ header nav ul.menu li a:hover {
 .toggle-details.rotated {
     transform: rotate(180deg);
 }
-    #weather-container {
-        display: flex;
-        flex-direction: column; /* per impilare i grafici uno sopra l'altro */
-        WIDTH: 45%;
-        align-items: center; /* per centrare i grafici */
-        background-color: #fff;
-        border-radius: 8px;
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    }
+ #weather-section {
+    display: flex;
+    justify-content: space-between; /* Per disporre i grafici uno accanto all'altro */
+}
 
-    canvas {
-        width: 93%; /* Limita la larghezza massima del canvas */
-        height: auto; /* Imposta l'altezza automaticamente */
-        margin: 10px 0; /* Spaziatura tra i grafici */
-    }
+#weather-container {
+    display: flex;
+    flex-direction: column;
+    width: 45%; /* La larghezza è già stata impostata */
+    align-items: center;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+#tourist-container {
+    width: 45%; /* Anche il contenitore del grafico dei turisti avrà la stessa larghezza */
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 20px; /* Margine per separare i due contenitori */
+}
+
+canvas {
+    width: 93%; /* Mantiene la larghezza massima */
+    height: auto; /* Imposta l'altezza automaticamente */
+    margin: 10px 0; /* Spaziatura tra i grafici */
+}
 /* Media query per schermi piccoli */
 @media screen and (max-width: 768px) 
 {
