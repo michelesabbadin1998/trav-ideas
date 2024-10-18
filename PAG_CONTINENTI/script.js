@@ -66,4 +66,3 @@ document.addEventListener('DOMContentLoaded', () => {
     showSlide('photos-container', 0); // Corretto qui
 });
 
-});
