@@ -1,1 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <title>Tanzania</title>
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+    <header class="header-fascia">
+        <h1><a href="../../../index.html">PICKY</a></h1>
+        <nav>
+            <ul class="menu">
+                <li><a href="../../../index.html">Home</a></li>
+                <li><a href="partners.html">Our Partners</a></li>
+                <li><a href="contatti.html">Contact us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Sezione Hero -->
+        <section class="hero-tanzania">
+            <h2>Tanzania</h2>
+            <p>HAKUNA MATATA</p>
+            <a href="discovertanzania.html">
+                <button class="view-all-button">Discover the Country</button>
+            </a>
+        </section>
+
+        <!-- Sezione di testo a larghezza intera -->
+        <section id="intro-text">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque vestibulum eu libero vel tempus. Donec vitae leo at dolor aliquam accumsan. Phasellus accumsan dui vel turpis pretium, at scelerisque orci auctor.</p>
+        </section>
+
+        <!-- Contenitore doppio: alloggi e foto -->
+        <section id="accommodation-and-photos">
+            <!-- Contenitore Alloggi -->
+            <div id="accommodation-container">
+                <h2>Recommended Accommodations</h2>
+                <div class="slider">
+                    <div class="slide">
+                        <h3>Hotel 1</h3>
+                        <p>Description of Hotel 1.</p>
+                    </div>
+                    <div class="slide">
+                        <h3>Hotel 2</h3>
+                        <p>Description of Hotel 2.</p>
+                    </div>
+                    <div class="slide">
+                        <h3>Hotel 3</h3>
+                        <p>Description of Hotel 3.</p>
+                    </div>
+                </div>
+                <button class="prev" onclick="prevSlide('accommodation')">◀</button>
+                <button class="next" onclick="nextSlide('accommodation')">▶</button>
+            </div>
+
+            <!-- Contenitore Foto -->
+            <div id="photos-container">
+                <h2>Photos</h2>
+                <div class="slider">
+                    <div class="slide">
+                        <img src="images/photo1.jpg" alt="Photo 1" class="photo-slide">
+                    </div>
+                    <div class="slide">
+                        <img src="images/photo2.jpg" alt="Photo 2" class="photo-slide">
+                    </div>
+                    <div class="slide">
+                        <img src="images/photo3.jpg" alt="Photo 3" class="photo-slide">
+                    </div>
+                </div>
+                <button class="prev" onclick="prevSlide('photos')">◀</button>
+                <button class="next" onclick="nextSlide('photos')">▶</button>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Copyright © 2024 | <a href="privacy.html">Privacy Policy</a></p>
+    </footer>
+
+    <script src="../../script.js"></script> <!-- Collega lo script JS per lo slider -->
+</body>
+</html>
 
