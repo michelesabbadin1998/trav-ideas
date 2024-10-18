@@ -75,18 +75,28 @@ document.addEventListener('DOMContentLoaded', function () {
     showSlide('accommodation-container', 0);
     showSlide('photos-container', 0);
 
-    // Collega i pulsanti alle funzioni
-    document.querySelectorAll('.prev').forEach(button => {
-        button.addEventListener('click', function() => {
-            const containerId = button.parentElement.id; // Ottiene l'ID del contenitore
-            prevSlide(containerId);
+       // Associa gli eventi ai pulsanti per accomodation e photos
+    document.querySelectorAll('#accommodation-container .prev').forEach(button => {
+        button.addEventListener('click', function () {
+            prevSlide('accommodation-container');
         });
     });
 
-    document.querySelectorAll('.next').forEach(button => {
-        button.addEventListener('click', function() => {
-            const containerId = button.parentElement.id; // Ottiene l'ID del contenitore
-            nextSlide(containerId);
+    document.querySelectorAll('#accommodation-container .next').forEach(button => {
+        button.addEventListener('click', function () {
+            nextSlide('accommodation-container');
+        });
+    });
+
+    document.querySelectorAll('#photos-container .prev').forEach(button => {
+        button.addEventListener('click', function () {
+            prevSlide('photos-container');
+        });
+    });
+
+    document.querySelectorAll('#photos-container .next').forEach(button => {
+        button.addEventListener('click', function () {
+            nextSlide('photos-container');
         });
     });
 });
