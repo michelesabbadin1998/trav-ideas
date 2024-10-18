@@ -77,14 +77,14 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Collega i pulsanti alle funzioni
     document.querySelectorAll('.prev').forEach(button => {
-        button.addEventListener('click', () => {
+        button.addEventListener('click', function() => {
             const containerId = button.parentElement.id; // Ottiene l'ID del contenitore
             prevSlide(containerId);
         });
     });
 
     document.querySelectorAll('.next').forEach(button => {
-        button.addEventListener('click', () => {
+        button.addEventListener('click', function() => {
             const containerId = button.parentElement.id; // Ottiene l'ID del contenitore
             nextSlide(containerId);
         });
