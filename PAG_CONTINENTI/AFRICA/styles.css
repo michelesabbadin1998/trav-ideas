@@ -194,6 +194,16 @@ header nav ul.menu li a:hover {
 .toggle-details.rotated {
     transform: rotate(180deg);
 }
+#country-description {
+        display: flex;
+    flex-direction: column;
+    width: 50%; /* La larghezza è già stata impostata */
+    align-items: center;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+    
  #weather-section {
     display: flex;
     justify-content: space-between; /* Per disporre i grafici uno accanto all'altro */
