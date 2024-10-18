@@ -300,7 +300,6 @@ canvas {
 .slider {
     display: flex;
     overflow: hidden;
-    position: relative;
 }
 
 .slide {
@@ -308,8 +307,6 @@ canvas {
     padding: 10px;
     box-sizing: border-box;
     transition: transform 0.5s ease-in-out;
-    position: absolute; /* Posiziona le slide in modo assoluto */
-    left: 0; /* Posiziona tutte le slide in cima */
 }
 
 .photo-slide {
