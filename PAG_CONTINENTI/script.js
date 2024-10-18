@@ -35,6 +35,35 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 });
+let currentIndex = 0;
+
+function showSlide(containerId, index) {
+    const container = document.getElementById(containerId);
+    const slides = container.querySelectorAll('.slide');
+    const totalSlides = slides.length;
+
+    if (index >= totalSlides) currentIndex = 0;
+    else if (index < 0) currentIndex = totalSlides - 1;
+    else currentIndex = index;
+
+    slides.forEach((slide, i) => {
+        slide.style.transform = `translateX(${(i - currentIndex) * 100}%)`;
+    });
+}
+
+function nextSlide(containerId) {
+    showSlide(containerId, currentIndex + 1);
+}
+
+function prevSlide(containerId) {
+    showSlide(containerId, currentIndex - 1);
+}
+
+// Mostra la prima slide inizialmente
+document.addEventListener('DOMContentLoaded', () => {
+    showSlide('accommodation', 0);
+    showSlide('photos', 0);
+});
 
 
 
