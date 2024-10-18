@@ -261,100 +261,79 @@ canvas {
     padding: 5px;
 }
 
-/* Assicura che intro-text abbia la stessa larghezza degli altri contenitori */
+/* Sezione di testo a larghezza intera */
 #intro-text {
-    width: 100%; /* Imposta larghezza 100% */
-    max-width: 100%; /* Massima larghezza come gli altri contenitori */
-    margin: 0 auto; /* Centra l'elemento */
-    box-sizing: border-box; /* Assicura che il padding non aumenti la larghezza */
+    width: 100%;
     background-color: #fff;
     border-radius: 8px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-bottom: 10px;
+    text-align: justify;
+    display: flex;
 }
 
-/* Stile per l'intero contenitore */
+/* Contenitore per gli alloggi e le foto */
 #accommodation-and-photos {
     display: flex;
-    justify-content: space-between;
-    gap: 20px;
-    padding: 20px;
     width: 100%;
+    justify-content: space-between;
+    margin: 10px 0;
+    gap: 10px; /* Spaziatura tra i due contenitori */
+}
+
+/* Contenitore degli alloggi */
+#accommodation-container,
+#photos-container {
+    width: 49%;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    position: relative; /* Necessario per posizionare le frecce */
 }
 
 /* Slider */
 .slider {
-    position: relative;
-    width: 100%;
+    display: flex;
     overflow: hidden;
 }
 
 .slide {
-    display: inline-block;
-    width: 100%;
-    transition: transform 0.5s ease-in-out;
-    white-space: nowrap;
-}
-
-#accommodation-container, #photos-container {
-    width: 48%; /* Ogni slider occupa il 48% della larghezza */
+    min-width: 100%; /* Ogni slide occupa il 100% dello spazio disponibile */
     padding: 10px;
-    border: 1px solid #ccc;
+    box-sizing: border-box;
+    transition: transform 0.5s ease-in-out;
+}
+
+.photo-slide {
+    width: 100%;
+    height: auto;
     border-radius: 8px;
-    background-color: #f9f9f9;
 }
 
-h2 {
-    font-family: 'Inter', sans-serif;
-    font-size: 1.5rem;
-    margin-bottom: 10px;
-    text-align: center;
-}
-
-p {
-    font-family: 'Inter', sans-serif;
-    text-align: center;
-}
-
-button.prev, button.next {
+/* Frecce dello slider */
+.prev,
+.next {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background-color: #333;
+    background-color: rgba(0, 0, 0, 0.5);
     color: white;
     border: none;
     padding: 10px;
     cursor: pointer;
-    font-size: 1.2rem;
-    z-index: 1;
     border-radius: 50%;
 }
 
-#accommodation-container .prev {
-    left: 10px; /* Posiziona a sinistra */
+.prev {
+    left: 10px;
 }
 
-#accommodation-container .next {
-    right: 10px; /* Posiziona a destra */
+.next {
+    right: 10px;
 }
 
-#photos-container .prev {
-    left: 10px; /* Posiziona a sinistra */
-}
-
-#photos-container .next {
-    right: 10px; /* Posiziona a destra */
-}
-
-button:hover {
-    background-color: #555;
-}
-
-/* Stile per le immagini nello slider delle foto */
-.photo-slide {
-    width: 100%;
-    border-radius: 8px;
-    object-fit: cover;
-}
 
 
 /* Media query per schermi piccoli */
