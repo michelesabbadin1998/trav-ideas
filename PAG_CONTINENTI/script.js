@@ -62,6 +62,8 @@ function prevSlide(containerId) {
 
 // Mostra la prima slide inizialmente
 document.addEventListener('DOMContentLoaded', () => {
-    showSlide('accommodation', 0);
-    showSlide('photos', 0);
+    showSlide('accommodation-container', 0); // Corretto qui
+    showSlide('photos-container', 0); // Corretto qui
+});
+
 });
