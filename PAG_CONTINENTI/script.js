@@ -36,36 +36,57 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 });
 
-let currentIndex = {
-    accommodation: 0,
-    photos: 0
-};
+document.addEventListener('DOMContentLoaded', function () {
+    // Inizializza gli indici correnti
+    let currentIndex = {
+        'accommodation-container': 0,
+        'photos-container': 0
+    };
 
-function showSlide(containerId, index) {
-    const container = document.getElementById(containerId);
-    const slides = container.querySelectorAll('.slide');
-    const totalSlides = slides.length;
+    // Funzione per mostrare la slide corretta
+    function showSlide(containerId, index) {
+        const container = document.getElementById(containerId);
+        const slides = container.querySelectorAll('.slide');
+        const totalSlides = slides.length;
 
-    if (index >= totalSlides) currentIndex = 0;
-    else if (index < 0) currentIndex = totalSlides - 1;
-    else currentIndex = index;
+        // Aggiorna l'indice corrente
+        if (index >= totalSlides) currentIndex[containerId] = 0;
+        else if (index < 0) currentIndex[containerId] = totalSlides - 1;
+        else currentIndex[containerId] = index;
 
-    slides.forEach((slide, i) => {
-        slide.style.transform = `translateX(${(i - currentIndex) * 100}%)`;
+        // Mostra le slide corrette
+        slides.forEach((slide, i) => {
+            slide.style.transform = `translateX(${(i - currentIndex[containerId]) * 100}%)`;
+        });
+    }
+
+    // Funzione per andare alla slide successiva
+    function nextSlide(containerId) {
+        showSlide(containerId, currentIndex[containerId] + 1);
+    }
+
+    // Funzione per andare alla slide precedente
+    function prevSlide(containerId) {
+        showSlide(containerId, currentIndex[containerId] - 1);
+    }
+
+    // Inizializza gli slider
+    showSlide('accommodation-container', 0);
+    showSlide('photos-container', 0);
+
+    // Collega i pulsanti alle funzioni
+    document.querySelectorAll('.prev').forEach(button => {
+        button.addEventListener('click', () => {
+            const containerId = button.parentElement.id; // Ottiene l'ID del contenitore
+            prevSlide(containerId);
+        });
     });
-}
 
-function nextSlide(containerId) {
-    showSlide(containerId, currentIndex[containerId] + 1);
-}
-
-function prevSlide(containerId) {
-    showSlide(containerId, currentIndex[containerId] - 1);
-}
-
-// Mostra la prima slide inizialmente
-document.addEventListener('DOMContentLoaded', () => {
-    showSlide('accommodation-container', 0); // Corretto qui
-    showSlide('photos-container', 0); // Corretto qui
+    document.querySelectorAll('.next').forEach(button => {
+        button.addEventListener('click', () => {
+            const containerId = button.parentElement.id; // Ottiene l'ID del contenitore
+            nextSlide(containerId);
+        });
+    });
 });
 
