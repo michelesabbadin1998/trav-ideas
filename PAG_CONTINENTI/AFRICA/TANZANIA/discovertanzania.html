@@ -6,6 +6,7 @@
     <title>Tanzania Information</title>
     <link rel="stylesheet" href="../styles.css">
     <script src="../../script.js"></script> <!-- Collega lo script JS -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
     <header class="header-fascia">
@@ -32,13 +33,162 @@
         </section>
 
         <!-- Sezione Meteo -->
-        <section id="weather-section">
-            <h2>Weather Forecast</h2>
-            <div id="weather-container">
-                <!-- Qui andrà il meteo. Puoi usare un widget o API di meteo -->
-                <p>Loading current weather for Tanzania...</p>
-            </div>
-        </section>
+        
+<section id="weather-section">
+    <h2>Weather Forecast</h2>
+    <div id="weather-container">
+        <canvas id="precipitationChart" width="400" height="200"></canvas>
+        <canvas id="sunlightChart" width="400" height="200"></canvas>
+        <canvas id="temperatureChart" width="400" height="200"></canvas>
+    </div>
+</section>
+
+<script>
+    // Dati per i grafici
+    const months = ["Gen", "Feb", "Mar", "Apr", "Mag", "Giu", "Lug", "Ago", "Set", "Ott", "Nov", "Dic"];
+
+    const precipitationData = {
+        labels: months,
+        datasets: [
+            {
+                label: 'Zanzibar',
+                data: [180, 130, 190, 250, 230, 70, 50, 30, 40, 180, 200, 220],
+                backgroundColor: 'rgba(75, 192, 192, 0.6)',
+            },
+            {
+                label: 'Arusha',
+                data: [60, 50, 80, 130, 110, 40, 20, 30, 40, 80, 100, 70],
+                backgroundColor: 'rgba(153, 102, 255, 0.6)',
+            },
+            {
+                label: 'Mwanza',
+                data: [120, 100, 130, 180, 160, 30, 10, 20, 60, 110, 150, 140],
+                backgroundColor: 'rgba(255, 159, 64, 0.6)',
+            },
+        ],
+    };
+
+    const sunlightData = {
+        labels: months,
+        datasets: [
+            {
+                label: 'Zanzibar',
+                data: [8, 9, 8, 7, 6, 7, 8, 9, 9, 8, 7, 7],
+                backgroundColor: 'rgba(255, 206, 86, 0.6)',
+            },
+            {
+                label: 'Arusha',
+                data: [8, 9, 8, 7, 6, 8, 9, 9, 9, 8, 7, 8],
+                backgroundColor: 'rgba(75, 192, 192, 0.6)',
+            },
+            {
+                label: 'Mwanza',
+                data: [9, 9, 8, 7, 6, 7, 8, 9, 9, 8, 7, 8],
+                backgroundColor: 'rgba(153, 102, 255, 0.6)',
+            },
+        ],
+    };
+
+    const temperatureData = {
+        labels: months,
+        datasets: [
+            {
+                label: 'Zanzibar Max',
+                data: [31, 32, 32, 31, 30, 29, 28, 28, 29, 30, 31, 31],
+                borderColor: 'rgba(255, 99, 132, 1)',
+                fill: false,
+            },
+            {
+                label: 'Zanzibar Min',
+                data: [23, 24, 25, 24, 23, 22, 21, 21, 22, 23, 24, 24],
+                borderColor: 'rgba(54, 162, 235, 1)',
+                fill: false,
+            },
+            {
+                label: 'Arusha Max',
+                data: [28, 28, 28, 27, 26, 25, 25, 25, 26, 27, 27, 28],
+                borderColor: 'rgba(255, 206, 86, 1)',
+                fill: false,
+            },
+            {
+                label: 'Arusha Min',
+                data: [14, 14, 14, 14, 13, 11, 11, 12, 12, 14, 15, 15],
+                borderColor: 'rgba(75, 192, 192, 1)',
+                fill: false,
+            },
+            {
+                label: 'Mwanza Max',
+                data: [30, 31, 30, 30, 29, 28, 28, 28, 29, 30, 30, 30],
+                borderColor: 'rgba(153, 102, 255, 1)',
+                fill: false,
+            },
+            {
+                label: 'Mwanza Min',
+                data: [19, 20, 21, 21, 20, 18, 17, 18, 19, 20, 21, 21],
+                borderColor: 'rgba(255, 159, 64, 1)',
+                fill: false,
+            },
+        ],
+    };
+
+    // Configurazione dei grafici
+    const configPrecipitation = {
+        type: 'bar',
+        data: precipitationData,
+        options: {
+            responsive: true,
+            plugins: {
+                legend: {
+                    position: 'top',
+                },
+                title: {
+                    display: true,
+                    text: 'Precipitazioni Medie Mensili (mm)',
+                },
+            },
+        },
+    };
+
+    const configSunlight = {
+        type: 'bar',
+        data: sunlightData,
+        options: {
+            responsive: true,
+            plugins: {
+                legend: {
+                    position: 'top',
+                },
+                title: {
+                    display: true,
+                    text: 'Ore di Sole Medie Mensili',
+                },
+            },
+        },
+    };
+
+    const configTemperature = {
+        type: 'line',
+        data: temperatureData,
+        options: {
+            responsive: true,
+            plugins: {
+                legend: {
+                    position: 'top',
+                },
+                title: {
+                    display: true,
+                    text: 'Temperature Medie Mensili (°C)',
+                },
+            },
+        },
+    };
+
+    // Creazione dei grafici
+    const precipitationChart = new Chart(document.getElementById('precipitationChart'), configPrecipitation);
+    const sunlightChart = new Chart(document.getElementById('sunlightChart'), configSunlight);
+    const temperatureChart = new Chart(document.getElementById('temperatureChart'), configTemperature);
+</script>
+
     </main>
 
     <footer>
