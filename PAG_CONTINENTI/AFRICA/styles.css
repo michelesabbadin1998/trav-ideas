@@ -197,11 +197,12 @@ header nav ul.menu li a:hover {
     #weather-container {
         display: flex;
         flex-direction: column; /* per impilare i grafici uno sopra l'altro */
+        WIDTH: 45%;
         align-items: center; /* per centrare i grafici */
     }
 
     canvas {
-        max-width: 150px; /* Limita la larghezza massima del canvas */
+        width: 100%; /* Limita la larghezza massima del canvas */
         height: auto; /* Imposta l'altezza automaticamente */
         margin: 10px 0; /* Spaziatura tra i grafici */
     }
@@ -234,5 +235,8 @@ header nav ul.menu li a:hover {
     footer
     {
         font-size: 10px;
+    }
+        #weather-container {
+        width: 90%; /* Più largo sui dispositivi piccoli */
     }
 }
