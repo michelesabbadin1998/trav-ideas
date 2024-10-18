@@ -304,7 +304,7 @@ canvas {
 }
 
 .slide {
-    min-width: 100%; /* Ogni slide occupa il 100% dello spazio disponibile */
+    min-width: 50%; /* Ogni slide occupa il 100% dello spazio disponibile */
     flex-shrink: 0;  /* Impedisce che le slide si ridimensionino */
     padding: 10px;
     box-sizing: border-box;
