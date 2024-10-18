@@ -36,7 +36,10 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 });
 
-let currentIndex = 0;
+let currentIndex = {
+    accommodation: 0,
+    photos: 0
+};
 
 function showSlide(containerId, index) {
     const container = document.getElementById(containerId);
@@ -53,11 +56,11 @@ function showSlide(containerId, index) {
 }
 
 function nextSlide(containerId) {
-    showSlide(containerId, currentIndex + 1);
+    showSlide(containerId, currentIndex[containerId] + 1);
 }
 
 function prevSlide(containerId) {
-    showSlide(containerId, currentIndex - 1);
+    showSlide(containerId, currentIndex[containerId] - 1);
 }
 
 // Mostra la prima slide inizialmente
