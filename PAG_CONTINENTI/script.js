@@ -36,62 +36,32 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 });
 
-// Indici separati per i due slider
-let currentIndexAccommodation = 0;
-let currentIndexPhotos = 0;
+let currentIndex = 0;
 
 function showSlide(containerId, index) {
     const container = document.getElementById(containerId);
     const slides = container.querySelectorAll('.slide');
     const totalSlides = slides.length;
 
-    let currentIndex;
-
-    // Gestisce l'indice corretto in base al container
-    if (containerId === 'accommodation-container') {
-        currentIndex = currentIndexAccommodation;
-    } else if (containerId === 'photos-container') {
-        currentIndex = currentIndexPhotos;
-    }
-
-    // Gestisce la logica di rotazione
     if (index >= totalSlides) currentIndex = 0;
     else if (index < 0) currentIndex = totalSlides - 1;
     else currentIndex = index;
 
-    // Applica la traduzione per mostrare la slide corretta
     slides.forEach((slide, i) => {
         slide.style.transform = `translateX(${(i - currentIndex) * 100}%)`;
     });
-
-    // Aggiorna l'indice corretto in base al container
-    if (containerId === 'accommodation-container') {
-        currentIndexAccommodation = currentIndex;
-    } else if (containerId === 'photos-container') {
-        currentIndexPhotos = currentIndex;
-    }
 }
 
 function nextSlide(containerId) {
-    if (containerId === 'accommodation-container') {
-        showSlide(containerId, currentIndexAccommodation + 1);
-    } else if (containerId === 'photos-container') {
-        showSlide(containerId, currentIndexPhotos + 1);
-    }
+    showSlide(containerId, currentIndex + 1);
 }
 
 function prevSlide(containerId) {
-    if (containerId === 'accommodation-container') {
-        showSlide(containerId, currentIndexAccommodation - 1);
-    } else if (containerId === 'photos-container') {
-        showSlide(containerId, currentIndexPhotos - 1);
-    }
+    showSlide(containerId, currentIndex - 1);
 }
 
-// Inizializza le slide al caricamento della pagina
+// Mostra la prima slide inizialmente
 document.addEventListener('DOMContentLoaded', () => {
-    showSlide('accommodation-container', 0);
-    showSlide('photos-container', 0);
+    showSlide('accommodation', 0);
+    showSlide('photos', 0);
 });
-
-
