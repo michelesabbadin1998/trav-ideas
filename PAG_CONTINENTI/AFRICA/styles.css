@@ -194,7 +194,17 @@ header nav ul.menu li a:hover {
 .toggle-details.rotated {
     transform: rotate(180deg);
 }
+    #weather-container {
+        display: flex;
+        flex-direction: column; /* per impilare i grafici uno sopra l'altro */
+        align-items: center; /* per centrare i grafici */
+    }
 
+    canvas {
+        max-width: 300px; /* Limita la larghezza massima del canvas */
+        height: auto; /* Imposta l'altezza automaticamente */
+        margin: 10px 0; /* Spaziatura tra i grafici */
+    }
 /* Media query per schermi piccoli */
 @media screen and (max-width: 768px) 
 {
