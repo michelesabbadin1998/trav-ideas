@@ -199,6 +199,9 @@ header nav ul.menu li a:hover {
         flex-direction: column; /* per impilare i grafici uno sopra l'altro */
         WIDTH: 45%;
         align-items: center; /* per centrare i grafici */
+        background-color: #fff;
+        border-radius: 8px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     }
 
     canvas {
