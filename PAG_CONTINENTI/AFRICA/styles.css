@@ -217,6 +217,7 @@ header nav ul.menu li a:hover {
     display: flex;
     flex-direction: column;
     align-items: center;
+    height: auto;
     margin-left: 5px; /* Margine per separare i due contenitori */
 }
 
