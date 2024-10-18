@@ -315,7 +315,6 @@ p {
     text-align: center;
 }
 
-/* Pulsanti per scorrere le slide */
 button.prev, button.next {
     position: absolute;
     top: 50%;
@@ -330,12 +329,20 @@ button.prev, button.next {
     border-radius: 50%;
 }
 
-button.prev {
-    left: 10px;
+#accommodation-container .prev {
+    left: 10px; /* Posiziona a sinistra */
 }
 
-button.next {
-    right: 10px;
+#accommodation-container .next {
+    right: 10px; /* Posiziona a destra */
+}
+
+#photos-container .prev {
+    left: 10px; /* Posiziona a sinistra */
+}
+
+#photos-container .next {
+    right: 10px; /* Posiziona a destra */
 }
 
 button:hover {
