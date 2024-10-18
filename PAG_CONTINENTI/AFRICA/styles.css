@@ -250,6 +250,78 @@ canvas {
     margin: 10px 0; /* Spaziatura tra i grafici */
     padding: 5px;
 }
+
+/* Sezione di testo a larghezza intera */
+#intro-text {
+    width: 100%;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-bottom: 10px;
+    text-align: justify;
+}
+
+/* Contenitore per gli alloggi e le foto */
+#accommodation-and-photos {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 0;
+    gap: 10px; /* Spaziatura tra i due contenitori */
+}
+
+/* Contenitore degli alloggi */
+#accommodation-container,
+#photos-container {
+    width: 49%;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    position: relative; /* Necessario per posizionare le frecce */
+}
+
+/* Slider */
+.slider {
+    display: flex;
+    overflow: hidden;
+}
+
+.slide {
+    min-width: 100%; /* Ogni slide occupa il 100% dello spazio disponibile */
+    padding: 10px;
+    box-sizing: border-box;
+    transition: transform 0.5s ease-in-out;
+}
+
+.photo-slide {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+/* Frecce dello slider */
+.prev,
+.next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
 /* Media query per schermi piccoli */
 @media screen and (max-width: 768px) 
 {
