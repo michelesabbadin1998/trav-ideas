@@ -52,9 +52,8 @@ let currentIndex = {
         console.log(currentIndex);
 
         // Aggiorna l'indice corrente
-        if (index >= totalSlides) currentIndex[containerId] = 0;
-        else if (index < 0) currentIndex[containerId] = totalSlides - 1;
-        else currentIndex[containerId] = index;
+        if (index < 0) currentIndex[containerId] = totalSlides - 1;
+        else currentIndex[containerId] = (currentIndex[containerId] + 1) % totalSlides;
 
         // Mostra le slide corrette
         slides.forEach((slide, i) => {
