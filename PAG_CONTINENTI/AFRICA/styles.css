@@ -219,6 +219,8 @@ header nav ul.menu li a:hover {
  #weather-section {
     display: flex;
     justify-content: space-between; /* Per disporre i grafici uno accanto all'altro */
+    gap: 10px;
+    width: 100%;
 }
 
 #weather-container {
@@ -239,7 +241,6 @@ header nav ul.menu li a:hover {
     display: flex;
     flex-direction: column;
     height: auto;
-    margin-left: 10px; /* Margine per separare i due contenitori */
 }
 /* Allineamento del titolo h2 al centro */
 #tourist-container h2 {
