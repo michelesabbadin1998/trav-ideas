@@ -240,7 +240,6 @@ header nav ul.menu li a:hover {
     flex-direction: column;
     height: auto;
     margin-left: 10px; /* Margine per separare i due contenitori */
-    padding: 10px;
 }
 /* Allineamento del titolo h2 al centro */
 #tourist-container h2 {
@@ -250,6 +249,12 @@ header nav ul.menu li a:hover {
 
 /* Allineamento dei titoli h3 a sinistra */
 #tourist-container h3 {
+    text-align: left;
+    width: 100%; /* Assicura che l'elemento occupi l'intera larghezza del contenitore */
+    padding: 10px;
+}
+
+#tourist-container p {
     text-align: left;
     width: 100%; /* Assicura che l'elemento occupi l'intera larghezza del contenitore */
     padding: 10px;
