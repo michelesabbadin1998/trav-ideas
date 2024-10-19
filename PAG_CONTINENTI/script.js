@@ -37,11 +37,12 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 document.addEventListener('DOMContentLoaded', function () {
-    // Inizializza gli indici correnti
-    let currentIndex = {
-        'accommodation-container': 0,
-        'photos-container': 0
-    };
+let currentIndex = {
+    'accommodation-container': 0,
+    'photos-container': 0,
+    'accommodation-container-2': 0,
+    'photos-container-2': 0
+};
 
     // Funzione per mostrare la slide corretta
     function showSlide(containerId, index) {
@@ -71,33 +72,60 @@ document.addEventListener('DOMContentLoaded', function () {
         showSlide(containerId, currentIndex[containerId] - 1);
     }
 
-    // Inizializza gli slider
-    showSlide('accommodation-container', 0);
-    showSlide('photos-container', 0);
+    // Inizializza gli indici correnti per entrambi i contenitori
 
-       // Associa gli eventi ai pulsanti per accomodation e photos
-    document.querySelectorAll('#accommodation-container .prev').forEach(button => {
-        button.addEventListener('click', function () {
-            prevSlide('accommodation-container');
-        });
-    });
+// Inizializza gli slider per entrambi i set di contenitori
+showSlide('accommodation-container', 0);
+showSlide('photos-container', 0);
+showSlide('accommodation-container-2', 0);
+showSlide('photos-container-2', 0);
 
-    document.querySelectorAll('#accommodation-container .next').forEach(button => {
-        button.addEventListener('click', function () {
-            nextSlide('accommodation-container');
-        });
+// Associa gli eventi ai pulsanti per tutti i contenitori
+document.querySelectorAll('#accommodation-container .prev').forEach(button => {
+    button.addEventListener('click', function () {
+        prevSlide('accommodation-container');
     });
+});
+document.querySelectorAll('#accommodation-container .next').forEach(button => {
+    button.addEventListener('click', function () {
+        nextSlide('accommodation-container');
+    });
+});
 
-    document.querySelectorAll('#photos-container .prev').forEach(button => {
-        button.addEventListener('click', function () {
-            prevSlide('photos-container');
-        });
+// Ripeti per il secondo set
+document.querySelectorAll('#accommodation-container-2 .prev').forEach(button => {
+    button.addEventListener('click', function () {
+        prevSlide('accommodation-container-2');
     });
+});
+document.querySelectorAll('#accommodation-container-2 .next').forEach(button => {
+    button.addEventListener('click', function () {
+        nextSlide('accommodation-container-2');
+    });
+});
 
-    document.querySelectorAll('#photos-container .next').forEach(button => {
-        button.addEventListener('click', function () {
-            nextSlide('photos-container');
-        });
+// Ripeti per le foto
+document.querySelectorAll('#photos-container .prev').forEach(button => {
+    button.addEventListener('click', function () {
+        prevSlide('photos-container');
     });
+});
+document.querySelectorAll('#photos-container .next').forEach(button => {
+    button.addEventListener('click', function () {
+        nextSlide('photos-container');
+    });
+});
+
+// Ripeti per il secondo set di foto
+document.querySelectorAll('#photos-container-2 .prev').forEach(button => {
+    button.addEventListener('click', function () {
+        prevSlide('photos-container-2');
+    });
+});
+document.querySelectorAll('#photos-container-2 .next').forEach(button => {
+    button.addEventListener('click', function () {
+        nextSlide('photos-container-2');
+    });
+});
 });
 
