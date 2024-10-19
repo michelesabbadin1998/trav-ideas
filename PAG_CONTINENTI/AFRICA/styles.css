@@ -327,6 +327,7 @@ canvas {
     display: flex;
     overflow: hidden;
     width: 100%; /* Assicura che lo slider occupi il 100% del contenitore genitore */
+    position: relative;
 }
 
 .slide {
@@ -335,6 +336,7 @@ canvas {
     padding: 10px;
     box-sizing: border-box;
     transition: transform 0.5s ease-in-out;
+    overflow: hidden;
 }
 
 .photo-slide {
