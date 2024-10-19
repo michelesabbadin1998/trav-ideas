@@ -105,12 +105,12 @@ document.querySelectorAll('#accommodation-container-2 .next').forEach(button => 
 });
 
 // Ripeti per il terzo set
-document.querySelectorAll('#accommodation-container-2 .prev').forEach(button => {
+document.querySelectorAll('#accommodation-container-3 .prev').forEach(button => {
     button.addEventListener('click', function () {
         prevSlide('accommodation-container-3');
     });
 });
-document.querySelectorAll('#accommodation-container-2 .next').forEach(button => {
+document.querySelectorAll('#accommodation-container-3 .next').forEach(button => {
     button.addEventListener('click', function () {
         nextSlide('accommodation-container-3');
     });
