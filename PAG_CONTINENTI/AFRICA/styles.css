@@ -213,7 +213,7 @@ header nav ul.menu li a:hover {
     border-radius: 8px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     margin-bottom: 10px;
-    padding: 5px;
+    padding: 10px;
 }
     
  #weather-section {
@@ -252,13 +252,14 @@ header nav ul.menu li a:hover {
 #tourist-container h3 {
     text-align: left;
     width: 100%; /* Assicura che l'elemento occupi l'intera larghezza del contenitore */
+    padding: 10px;
 }
 
 canvas {
     width: 93%; /* Mantiene la larghezza massima */
     height: auto; /* Imposta l'altezza automaticamente */
     margin: 10px 0; /* Spaziatura tra i grafici */
-    padding: 5px;
+    padding: 10px;
 }
 
 /* Sezione di testo a larghezza intera */
