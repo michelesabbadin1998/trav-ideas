@@ -221,6 +221,7 @@ header nav ul.menu li a:hover {
     justify-content: space-between; /* Per disporre i grafici uno accanto all'altro */
     gap: 10px;
     width: 100%;
+    padding: 10px;
 }
 
 #weather-container {
