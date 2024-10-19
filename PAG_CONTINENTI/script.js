@@ -59,6 +59,7 @@ let currentIndex = {
         // Mostra le slide corrette
         slides.forEach((slide, i) => {
             slide.style.transform = `translateX(${(i - currentIndex[containerId]) * 100}%)`;
+            console.log(`Slide ${i}: Transform = ${translateValue}%`); 
         });
     }
 
