@@ -320,6 +320,7 @@ canvas {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     padding: 20px;
     position: relative; /* Necessario per posizionare le frecce */
+    overflow: hidden;
 }
 
 /* Slider */
