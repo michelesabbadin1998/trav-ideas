@@ -299,6 +299,21 @@ canvas {
     max-width: 100%;
 }
 
+/* Sezione di testo a larghezza intera */
+#intro-text-3 {
+    width: 100%;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    text-align: justify;
+    display: flex;
+    box-sizing: border-box;
+    max-width: 100%;
+}
+
 /* Contenitore per gli alloggi e le foto */
 #accommodation-and-photos {
     display: flex;
@@ -317,12 +332,32 @@ canvas {
     gap: 10px; /* Spaziatura tra i due contenitori */
 }
 
+/* Contenitore per gli alloggi e le foto */
+#accommodation-and-photos-3 {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    margin: 10px 0;
+    gap: 10px; /* Spaziatura tra i due contenitori */
+}
+
 /* Contenitore degli alloggi */
 #accommodation-container,
 #photos-container, 
 #accommodation-container-2,
 #photos-container-2 {
     width: 49%;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    position: relative; /* Necessario per posizionare le frecce */
+    overflow: hidden;
+}
+
+/* Contenitore degli alloggi */
+#accommodation-container-3 {
+    width: 100%;
     background-color: #fff;
     border-radius: 8px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
