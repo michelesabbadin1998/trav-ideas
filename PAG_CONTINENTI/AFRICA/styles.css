@@ -1,25 +1,37 @@
+/* Global reset for margins, padding, and box-sizing */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* General styling for body and containers */
 html, body {
-    height: 100%; 
-    margin: 0; 
-    padding: 0; 
-    display: flex; 
-    flex-direction: column; 
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Poppins', sans-serif; /* Applying 'Poppins' font */
+    background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 100%);
+    justify-content: center;
+    align-items: center;
+    color: white;
 }
 
 body {
-    font-family: Arial, sans-serif;
     background-color: #f0f0f0;
 }
 
 main {
-    flex: 1; 
+    flex: 1;
     padding: 20px;
-    margin-top: 40px; 
+    margin-top: 40px;
     margin-bottom: 60px;
 }
 
 footer {
-    background-color: #4CAF50; 
+    background-color: #4CAF50;
     color: white;
     text-align: center;
     width: 100%;
@@ -49,17 +61,15 @@ header {
 header h1 {
     font-size: 22px;
     margin: 0;
-    color: white;
 }
 
 header h1 a {
-    color: white; /* Colore bianco */
-    text-decoration: none; /* Rimuove la sottolineatura */
+    color: white;
+    text-decoration: none;
 }
 
 header h1 a:hover {
-    color: white; /* Colore bianco anche al passaggio del mouse */
-    text-decoration: none; /* Mantiene nessuna sottolineatura anche al passaggio del mouse */
+    color: white;
 }
 
 header nav ul.menu {
@@ -92,7 +102,7 @@ header nav ul.menu li a:hover {
     background-image: url('TANZANIA/tanzania-image/tanzaniahero.jpg');
     background-size: cover;
     background-position: center;
-    height: 30vh; /* L'hero occupa il 50% dell'altezza della finestra del browser */
+    height: 30vh;
     color: white;
     text-align: center;
     display: flex;
@@ -111,6 +121,7 @@ header nav ul.menu li a:hover {
     margin-top: 10px;
 }
 
+/* View all button */
 .view-all-button {
     padding: 10px 20px;
     background-color: #28a745;
@@ -126,7 +137,7 @@ header nav ul.menu li a:hover {
     background-color: #218838;
 }
 
-/* Sezione delle proposte di viaggio */
+/* Travel proposals section */
 #proposte {
     margin-top: 20px;
     padding: 20px;
@@ -135,6 +146,7 @@ header nav ul.menu li a:hover {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
+/* Each proposal box */
 .proposta {
     padding: 15px;
     border: 1px solid #ddd;
@@ -153,257 +165,52 @@ header nav ul.menu li a:hover {
     justify-content: space-between;
     align-items: center;
 }
-.proposta-link {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+
+/* Slider container */
+.slider-container {
+    position: relative;
     width: 100%;
-    text-decoration: none;
-    color: inherit; /* Mantiene il colore del testo */
-    padding: 10px; /* Padding per gestire lo spazio intorno agli elementi */
-}
-
-/* Stile per i simboli delle icone */
-.proposta-icons img {
-    width: 60px; /* Imposta la dimensione delle icone */
-    height: 60px;
-    margin-left: 10px; /* Spaziatura tra le icone */
-}
-
-/* Contenitore per i simboli */
-.proposta-icons {
-    display: flex;
-    align-items: right;
-}
-
-/* Icona tipo viaggio */
-.trip-icon {
-    margin-right: 10px; /* Spaziatura a destra dell'icona tipo viaggio */
-}
-
-/* Icona costo */
-.price-icon {
-    margin-right: 10px; /* Spaziatura a destra dell'icona costo */
-}
-
-.proposta h3 {
-    margin: 0;
-}
-
-.toggle-details {
-    font-size: 20px;
-    cursor: pointer;
-    transition: transform 0.3s ease;
-    z-index: 2; /* La freccia rimane sopra il link */
-}
-
-.proposta-dettagli {
-    display: none; /* Dettagli nascosti di default */
-}
-
-.toggle-details.rotated {
-    transform: rotate(180deg);
-}
-#country-description {
-    display: flex;
-    flex-direction: column;
-    width: 100%; /* La larghezza è già stata impostata */
-    align-items: center;
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    margin-bottom: 10px;
-    padding: 10px;
-}
-    
- #weather-section {
-    display: flex;
-    justify-content: space-between; /* Per disporre i grafici uno accanto all'altro */
-    gap: 10px;
-    width: 100%;
-    padding: 10px;
-}
-
-#weather-container {
-    display: flex;
-    flex-direction: column;
-    width: 50%; /* La larghezza è già stata impostata */
-    align-items: center;
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-}
-
-#tourist-container {
-    width: 50%; /* Anche il contenitore del grafico dei turisti avrà la stessa larghezza */
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    display: flex;
-    flex-direction: column;
-    height: auto;
-}
-/* Allineamento del titolo h2 al centro */
-#tourist-container h2 {
-    text-align: center;
-    width: 100%; /* Assicura che l'elemento occupi l'intera larghezza del contenitore */
-}
-
-/* Allineamento dei titoli h3 a sinistra */
-#tourist-container h3 {
-    text-align: left;
-    width: 100%; /* Assicura che l'elemento occupi l'intera larghezza del contenitore */
-    padding: 10px;
-}
-
-#tourist-container p {
-    text-align: left;
-    width: 100%; /* Assicura che l'elemento occupi l'intera larghezza del contenitore */
-    padding: 10px;
-}
-
-canvas {
-    width: 93%; /* Mantiene la larghezza massima */
-    height: auto; /* Imposta l'altezza automaticamente */
-    margin: 10px 0; /* Spaziatura tra i grafici */
-    padding: 10px;
-}
-
-/* Sezione di testo a larghezza intera */
-#intro-text {
-    width: 100%;
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    margin-bottom: 10px;
-    margin-top: 10px;
-    text-align: justify;
-    display: flex;
-    box-sizing: border-box;
-    max-width: 100%;
-}
-
-/* Sezione di testo a larghezza intera */
-#intro-text-2 {
-    width: 100%;
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    margin-bottom: 10px;
-    margin-top: 10px;
-    text-align: justify;
-    display: flex;
-    box-sizing: border-box;
-    max-width: 100%;
-}
-
-/* Sezione di testo a larghezza intera */
-#intro-text-3 {
-    width: 100%;
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    margin-bottom: 10px;
-    margin-top: 10px;
-    text-align: justify;
-    display: flex;
-    box-sizing: border-box;
-    max-width: 100%;
-}
-
-/* Contenitore per gli alloggi e le foto */
-#accommodation-and-photos {
-    display: flex;
-    width: 100%;
-    justify-content: space-between;
-    margin: 10px 0;
-    gap: 10px; /* Spaziatura tra i due contenitori */
-}
-
-/* Contenitore per gli alloggi e le foto */
-#accommodation-and-photos-2 {
-    display: flex;
-    width: 100%;
-    justify-content: space-between;
-    margin: 10px 0;
-    gap: 10px; /* Spaziatura tra i due contenitori */
-}
-
-/* Contenitore per gli alloggi e le foto */
-#accommodation-and-photos-3 {
-    display: flex;
-    width: 100%;
-    justify-content: space-between;
-    margin: 10px 0;
-    gap: 10px; /* Spaziatura tra i due contenitori */
-}
-
-/* Contenitore degli alloggi */
-#accommodation-container,
-#photos-container, 
-#accommodation-container-2,
-#photos-container-2 {
-    width: 49%;
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    position: relative; /* Necessario per posizionare le frecce */
+    max-width: 800px;
     overflow: hidden;
-}
-
-/* Contenitore degli alloggi */
-#accommodation-container-3 {
-    width: 100%;
-    background-color: #fff;
     border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    position: relative; /* Necessario per posizionare le frecce */
-    overflow: hidden;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
 }
 
 /* Slider */
 .slider {
     display: flex;
-    overflow: hidden;
-    width: 100%; /* Assicura che lo slider occupi il 100% del contenitore genitore */
-    position: relative;
+    transition: transform 0.4s ease-in-out;
 }
 
 .slide {
-    width: 100%; /* Ogni slide occupa il 100% dello spazio disponibile */
-    flex-shrink: 0;  /* Impedisce che le slide si ridimensionino */
-    padding: 10px;
-    box-sizing: border-box;
+    min-width: 100%;
+    height: 450px;
     transition: transform 0.5s ease-in-out;
-    overflow: hidden;
-    opacity:0;
-    white-space: normal; /* Consente al testo di andare a capo */
-    word-wrap: break-word; /* Se una parola è troppo lunga, verrà spezzata */
 }
 
-.photo-slide {
+.slide img {
     width: 100%;
-    height: auto;
+    height: 100%;
+    object-fit: cover;
     border-radius: 8px;
 }
 
-/* Frecce dello slider */
-.prev,
-.next {
+/* Navigation buttons */
+.prev, .next {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
     background-color: rgba(0, 0, 0, 0.5);
     color: white;
     border: none;
-    padding: 10px;
+    width: 40px;
+    height: 40px;
     cursor: pointer;
     border-radius: 50%;
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .prev {
@@ -414,39 +221,56 @@ canvas {
     right: 10px;
 }
 
+.prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
 
+/* Dot navigation for sliders */
+.dots-container {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
-/* Media query per schermi piccoli */
-@media screen and (max-width: 768px) 
-{
-    .header-fascia 
-    {
-        flex-direction: column;
-        height: auto;
-        padding: 10px;
+.dot {
+    height: 15px;
+    width: 15px;
+    margin: 0 5px;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.dot.active {
+    background-color: rgba(255, 255, 255, 1);
+}
+
+/* Weather and Tourist sections */
+#weather-section, #tourist-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    width: 100%;
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 768px) {
+    #weather-container, #tourist-container {
+        width: 90%;
     }
-    .menu 
-    {
+
+    .menu {
         flex-direction: column;
         align-items: center;
     }
-    .menu li 
-    {
+
+    .menu li {
         margin: 10px 0;
-    }
-    .menu li a 
-    {
-        font-size: 18px;
-    }
-    h1 
-    {
-        font-size: 24px;
-    }
-    footer
-    {
-        font-size: 10px;
-    }
-        #weather-container {
-        width: 90%; /* Più largo sui dispositivi piccoli */
     }
 }
