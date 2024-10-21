@@ -52,11 +52,13 @@ let currentIndex = {
         const totalSlides = slides.length;
         console.log(currentIndex);
 
-        // Aggiorna l'indice corrente
-        if (index < 0) currentIndex[containerId] = totalSlides - 1;
-        else currentIndex[containerId] = (currentIndex[containerId] + 1) % totalSlides;
+         currentIndex[containerId] = index;
 
-        // Mostra le slide corrette
+    // Ensure the index is within bounds
+        if (currentIndex[containerId] < 0) currentIndex[containerId] = totalSlides - 1;
+        if (currentIndex[containerId] >= totalSlides) currentIndex[containerId] = 0;
+
+        // Show the correct slide
         slides.forEach((slide, i) => {
             slide.style.transform = `translateX(${(i - currentIndex[containerId]) * 100}%)`;
         });
