@@ -37,36 +37,30 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 document.addEventListener('DOMContentLoaded', function () {
-let currentIndex = {
-    'accommodation-container': 0,
-    'photos-container': 0,
-    'accommodation-container-2': 0,
-    'photos-container-2': 0,
-    'accommodation-container-3':0
-};
+    let currentIndex = {
+        'accommodation-container': 0,
+        'photos-container': 0,
+        'accommodation-container-2': 0,
+        'photos-container-2': 0,
+        'accommodation-container-3': 0
+    };
 
-    // Funzione per mostrare la slide corretta
+    // Funzione per mostrare la slide corretta usando l'opacità
     function showSlide(containerId, index) {
         const container = document.getElementById(containerId);
         const slides = container.querySelectorAll('.slide');
         const totalSlides = slides.length;
-        console.log(currentIndex);
 
-         currentIndex[containerId] = index;
+        // Correggi l'indice in base ai limiti del numero di slide
+        currentIndex[containerId] = (index + totalSlides) % totalSlides;
 
-    // Ensure the index is within bounds
-        // Ensure the index is within bounds but doesn't loop
-        if (index < 0) {
-            currentIndex[containerId] = 0; // Stop at the first slide
-        } else if (index >= totalSlides) {
-            currentIndex[containerId] = totalSlides - 1; // Stop at the last slide
-        } else {
-            currentIndex[containerId] = index;
-        }
-
-        // Show the correct slide
+        // Imposta l'opacità delle slide
         slides.forEach((slide, i) => {
-            slide.style.transform = `translateX(${(i - currentIndex[containerId]) * 100}%)`;
+            if (i === currentIndex[containerId]) {
+                slide.style.opacity = 1;  // Mostra la slide corrente
+            } else {
+                slide.style.opacity = 0;  // Nasconde le altre slide
+            }
         });
     }
 
@@ -80,72 +74,21 @@ let currentIndex = {
         showSlide(containerId, currentIndex[containerId] - 1);
     }
 
-    // Inizializza gli indici correnti per entrambi i contenitori
+    // Inizializza gli slider per tutti i contenitori
+    ['accommodation-container', 'photos-container', 'accommodation-container-2', 'photos-container-2', 'accommodation-container-3'].forEach(containerId => {
+        showSlide(containerId, 0);  // Mostra la prima slide
 
-// Inizializza gli slider per entrambi i set di contenitori
-showSlide('accommodation-container', 0);
-showSlide('photos-container', 0);
-showSlide('accommodation-container-2', 0);
-showSlide('photos-container-2', 0);
-showSlide('accommodation-container-3', 0);    
-
-// Associa gli eventi ai pulsanti per tutti i contenitori
-document.querySelectorAll('#accommodation-container .prev').forEach(button => {
-    button.addEventListener('click', function () {
-        prevSlide('accommodation-container');
-    });
-});
-document.querySelectorAll('#accommodation-container .next').forEach(button => {
-    button.addEventListener('click', function () {
-        nextSlide('accommodation-container');
+        // Associa gli eventi ai pulsanti "prev" e "next"
+        document.querySelectorAll(`#${containerId} .prev`).forEach(button => {
+            button.addEventListener('click', function () {
+                prevSlide(containerId);
+            });
+        });
+        document.querySelectorAll(`#${containerId} .next`).forEach(button => {
+            button.addEventListener('click', function () {
+                nextSlide(containerId);
+            });
+        });
     });
 });
 
-// Ripeti per il secondo set
-document.querySelectorAll('#accommodation-container-2 .prev').forEach(button => {
-    button.addEventListener('click', function () {
-        prevSlide('accommodation-container-2');
-    });
-});
-document.querySelectorAll('#accommodation-container-2 .next').forEach(button => {
-    button.addEventListener('click', function () {
-        nextSlide('accommodation-container-2');
-    });
-});
-
-// Ripeti per il terzo set
-document.querySelectorAll('#accommodation-container-3 .prev').forEach(button => {
-    button.addEventListener('click', function () {
-        prevSlide('accommodation-container-3');
-    });
-});
-document.querySelectorAll('#accommodation-container-3 .next').forEach(button => {
-    button.addEventListener('click', function () {
-        nextSlide('accommodation-container-3');
-    });
-});
-
-// Ripeti per le foto
-document.querySelectorAll('#photos-container .prev').forEach(button => {
-    button.addEventListener('click', function () {
-        prevSlide('photos-container');
-    });
-});
-document.querySelectorAll('#photos-container .next').forEach(button => {
-    button.addEventListener('click', function () {
-        nextSlide('photos-container');
-    });
-});
-
-// Ripeti per il secondo set di foto
-document.querySelectorAll('#photos-container-2 .prev').forEach(button => {
-    button.addEventListener('click', function () {
-        prevSlide('photos-container-2');
-    });
-});
-document.querySelectorAll('#photos-container-2 .next').forEach(button => {
-    button.addEventListener('click', function () {
-        nextSlide('photos-container-2');
-    });
-});
-});
