@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400&display=swap" rel="stylesheet">
     <meta charset="UTF-8">
-    <title>Tanzania</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tanzania - The Coast</title>
     <link rel="stylesheet" href="../styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400&display=swap" rel="stylesheet">
 </head>
 <body>
     <header class="header-fascia">
@@ -22,42 +23,48 @@
         <!-- Sezione Hero -->
         <section class="hero-tanzania">
             <h2>Tanzania - The Coast</h2>
-            <p>travel tips to roam around Zanzibar and Dar Es Salaam coast</p>
+            <p>Travel tips to roam around Zanzibar and Dar Es Salaam coast</p>
             <a href="discovertanzania.html">
                 <button class="view-all-button">Discover the Country</button>
             </a>
         </section>
 
-        <!-- Sezione di testo a larghezza intera -->
+        <!-- Sezione testo a larghezza intera -->
         <section id="intro-text">
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque vestibulum eu libero vel tempus. Donec vitae leo at dolor aliquam accumsan. Phasellus accumsan dui vel turpis pretium, at scelerisque orci auctor.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque vestibulum eu libero vel tempus.</p>
         </section>
 
-        <!-- Contenitore doppio: alloggi e foto -->
+        <!-- Contenitore Slider: Alloggi -->
         <section id="accommodation-and-photos">
-            <!-- Contenitore Alloggi -->
-            <div id="accommodation-container">
+            <div class="slider-container">
                 <h2>Recommended Accommodations</h2>
                 <div class="slider">
                     <div class="slide">
                         <h3>Hotel 1</h3>
-                        <p>Description of Hotel 1............................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................</p>
+                        <p>Description of Hotel 1...</p>
                     </div>
                     <div class="slide">
                         <h3>Hotel 2</h3>
-                        <p>Description of Hotel 2.</p>
+                        <p>Description of Hotel 2...</p>
                     </div>
                     <div class="slide">
                         <h3>Hotel 3</h3>
-                        <p>Description of Hotel 3.</p>
+                        <p>Description of Hotel 3...</p>
                     </div>
                 </div>
-                    <button class="prev">◀</button>
-                    <button class="next">▶</button>
+                <button class="prev">&#10094;</button>
+                <button class="next">&#10095;</button>
+                <div class="dots-container">
+                    <span class="dot" data-index="0"></span>
+                    <span class="dot" data-index="1"></span>
+                    <span class="dot" data-index="2"></span>
+                </div>
             </div>
+        </section>
 
-            <!-- Contenitore Foto -->
-            <div id="photos-container">
+        <!-- Sezione Foto -->
+        <section id="photos-container">
+            <div class="slider-container">
                 <h2>Photos</h2>
                 <div class="slider">
                     <div class="slide">
@@ -70,39 +77,49 @@
                         <img src="images/photo3.jpg" alt="Photo 3" class="photo-slide">
                     </div>
                 </div>
-                    <button class="prev">◀</button>
-                    <button class="next">▶</button>
+                <button class="prev">&#10094;</button>
+                <button class="next">&#10095;</button>
+                <div class="dots-container">
+                    <span class="dot" data-index="0"></span>
+                    <span class="dot" data-index="1"></span>
+                    <span class="dot" data-index="2"></span>
+                </div>
             </div>
         </section>
-          <!-- Sezione di testo a larghezza intera -->
+
+        <!-- Sezione 2 -->
         <section id="intro-text-2">
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque vestibulum eu libero vel tempus. Donec vitae leo at dolor aliquam accumsan. Phasellus accumsan dui vel turpis pretium, at scelerisque orci auctor.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque vestibulum eu libero vel tempus.</p>
         </section>
 
-        <!-- Contenitore doppio: alloggi e foto -->
+        <!-- Slider Alloggi e Foto 2 -->
         <section id="accommodation-and-photos-2">
-            <!-- Contenitore Alloggi -->
-            <div id="accommodation-container-2">
+            <div class="slider-container">
                 <h2>Recommended Accommodations</h2>
                 <div class="slider">
                     <div class="slide">
                         <h3>Hotel 1</h3>
-                        <p>Description of Hotel 1.</p>
+                        <p>Description of Hotel 1...</p>
                     </div>
                     <div class="slide">
                         <h3>Hotel 2</h3>
-                        <p>Description of Hotel 2.</p>
+                        <p>Description of Hotel 2...</p>
                     </div>
                     <div class="slide">
                         <h3>Hotel 3</h3>
-                        <p>Description of Hotel 3.</p>
+                        <p>Description of Hotel 3...</p>
                     </div>
                 </div>
-                    <button class="prev">◀</button>
-                    <button class="next">▶</button>
+                <button class="prev">&#10094;</button>
+                <button class="next">&#10095;</button>
+                <div class="dots-container">
+                    <span class="dot" data-index="0"></span>
+                    <span class="dot" data-index="1"></span>
+                    <span class="dot" data-index="2"></span>
+                </div>
             </div>
-             <!-- Contenitore Foto -->
-            <div id="photos-container-2">
+
+            <div class="slider-container">
                 <h2>Photos</h2>
                 <div class="slider">
                     <div class="slide">
@@ -115,39 +132,47 @@
                         <img src="images/photo3.jpg" alt="Photo 3" class="photo-slide">
                     </div>
                 </div>
-                    <button class="prev">◀</button>
-                    <button class="next">▶</button>
+                <button class="prev">&#10094;</button>
+                <button class="next">&#10095;</button>
+                <div class="dots-container">
+                    <span class="dot" data-index="0"></span>
+                    <span class="dot" data-index="1"></span>
+                    <span class="dot" data-index="2"></span>
+                </div>
             </div>
         </section>
-                </section>
-          <!-- Sezione di testo a larghezza intera -->
+
+        <!-- Sezione 3 -->
         <section id="intro-text-3">
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque vestibulum eu libero vel tempus. Donec vitae leo at dolor aliquam accumsan. Phasellus accumsan dui vel turpis pretium, at scelerisque orci auctor.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque vestibulum eu libero vel tempus.</p>
         </section>
 
-        <!-- Contenitore doppio: alloggi e foto -->
+        <!-- Slider Alloggi 3 -->
         <section id="accommodation-and-photos-3">
-            <!-- Contenitore Alloggi -->
-            <div id="accommodation-container-3">
+            <div class="slider-container">
                 <h2>Recommended Accommodations</h2>
                 <div class="slider">
                     <div class="slide">
                         <h3>Hotel 1</h3>
-                        <p>Description of Hotel 1.</p>
+                        <p>Description of Hotel 1...</p>
                     </div>
                     <div class="slide">
                         <h3>Hotel 2</h3>
-                        <p>Description of Hotel 2.</p>
+                        <p>Description of Hotel 2...</p>
                     </div>
                     <div class="slide">
                         <h3>Hotel 3</h3>
-                        <p>Description of Hotel 3.</p>
+                        <p>Description of Hotel 3...</p>
                     </div>
                 </div>
-                    <button class="prev">◀</button>
-                    <button class="next">▶</button>
+                <button class="prev">&#10094;</button>
+                <button class="next">&#10095;</button>
+                <div class="dots-container">
+                    <span class="dot" data-index="0"></span>
+                    <span class="dot" data-index="1"></span>
+                    <span class="dot" data-index="2"></span>
+                </div>
             </div>
-            
         </section>
     </main>
 
@@ -155,6 +180,6 @@
         <p>Copyright © 2024 | <a href="privacy.html">Privacy Policy</a></p>
     </footer>
 
-    <script src="../../script.js"></script> <!-- Collega lo script JS per lo slider -->
+    <script src="../../script.js"></script>
 </body>
 </html>
