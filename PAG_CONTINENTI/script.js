@@ -41,7 +41,8 @@ let currentIndex = {
     'accommodation-container': 0,
     'photos-container': 0,
     'accommodation-container-2': 0,
-    'photos-container-2': 0
+    'photos-container-2': 0,
+    'accommodation-container-3':0
 };
 
     // Funzione per mostrare la slide corretta
