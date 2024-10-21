@@ -55,8 +55,14 @@ let currentIndex = {
          currentIndex[containerId] = index;
 
     // Ensure the index is within bounds
-        if (currentIndex[containerId] < 0) currentIndex[containerId] = totalSlides - 1;
-        if (currentIndex[containerId] >= totalSlides) currentIndex[containerId] = 0;
+        // Ensure the index is within bounds but doesn't loop
+        if (index < 0) {
+            currentIndex[containerId] = 0; // Stop at the first slide
+        } else if (index >= totalSlides) {
+            currentIndex[containerId] = totalSlides - 1; // Stop at the last slide
+        } else {
+            currentIndex[containerId] = index;
+        }
 
         // Show the correct slide
         slides.forEach((slide, i) => {
