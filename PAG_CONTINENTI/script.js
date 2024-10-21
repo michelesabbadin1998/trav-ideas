@@ -1,4 +1,5 @@
 document.addEventListener('DOMContentLoaded', function () {
+    // Sezione delle proposte con dettagli espandibili
     const proposte = document.querySelectorAll('.proposta');
 
     proposte.forEach(proposta => {
@@ -24,19 +25,14 @@ document.addEventListener('DOMContentLoaded', function () {
             });
 
             // Alterna la visibilità dei dettagli della proposta corrente
-            if (dettagli.style.display === 'none') {
-                dettagli.style.display = 'block';
-            } else {
-                dettagli.style.display = 'none';
-            }
+            dettagli.style.display = dettagli.style.display === 'none' ? 'block' : 'none';
 
             // Ruota la freccia
             freccia.classList.toggle('rotated');
         });
     });
-});
 
-document.addEventListener('DOMContentLoaded', function () {
+    // Sezione Slider
     let currentIndex = {
         'accommodation-container': 0,
         'photos-container': 0,
@@ -45,7 +41,7 @@ document.addEventListener('DOMContentLoaded', function () {
         'accommodation-container-3': 0
     };
 
-    // Funzione per mostrare la slide corretta usando l'opacità
+    // Funzione per mostrare la slide corretta
     function showSlide(containerId, index) {
         const container = document.getElementById(containerId);
         const slides = container.querySelectorAll('.slide');
@@ -56,11 +52,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
         // Imposta l'opacità delle slide
         slides.forEach((slide, i) => {
-            if (i === currentIndex[containerId]) {
-                slide.style.opacity = 1;  // Mostra la slide corrente
-            } else {
-                slide.style.opacity = 0;  // Nasconde le altre slide
-            }
+            slide.style.opacity = (i === currentIndex[containerId]) ? '1' : '0';
         });
     }
 
@@ -91,4 +83,3 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 });
-
